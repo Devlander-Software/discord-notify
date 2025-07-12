@@ -573,6 +573,7 @@ See [docs/API.md](docs/API.md) for complete API documentation and TypeScript int
 
 ## 📚 Documentation
 
+- **[🌐 Live Documentation](https://devlander-software.github.io/discord-notify/)** - Hosted on GitHub Pages
 - **[📖 API Documentation](docs/API.md)** - Complete API reference with TypeScript interfaces
 - **[📋 Changelog Guide](docs/CHANGELOG_GUIDE.md)** - How to manage changelog and releases
 - **[🚀 GitHub Releases](docs/GITHUB_RELEASES.md)** - Automated release process guide

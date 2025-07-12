@@ -1,0 +1,51 @@
+title: Discord Notify
+description: A Discord API-compliant notification service for Node.js applications
+url: "https://devlander-software.github.io"
+baseurl: "/discord-notify"
+
+# Build settings
+theme: jekyll-theme-cayman
+plugins:
+  - jekyll-relative-links
+  - jekyll-seo-tag
+
+# SEO
+author:
+  name: Devlander Software
+  email: contact@devlander.com
+
+# Social
+social:
+  github: Devlander-Software
+  twitter: landonwjohnson
+
+# Navigation
+nav:
+  - title: API Documentation
+    url: /API.md
+  - title: TypeDoc Reference
+    url: /api/
+  - title: GitHub Repository
+    url: https://github.com/Devlander-Software/discord-notify
+  - title: NPM Package
+    url: https://www.npmjs.com/package/discord-notify
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "default" 
