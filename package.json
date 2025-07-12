@@ -31,7 +31,12 @@
     "release:major": "npm run version:major && git push --tags",
     "release:interactive": "node scripts/release.js",
     "release:validate": "node -e \"require('./scripts/release.js').validateRelease()\"",
-    "release:preview": "node -e \"const r = require('./scripts/release.js'); console.log(r.createReleaseNotes(r.getCurrentVersion(), 'Preview changelog entry'));\""
+    "release:preview": "node -e \"const r = require('./scripts/release.js'); console.log(r.createReleaseNotes(r.getCurrentVersion(), 'Preview changelog entry'));\"",
+    "docs": "typedoc",
+    "docs:generate": "npm run docs",
+    "docs:serve": "typedoc --serve",
+    "docs:watch": "typedoc --watch",
+    "docs:local": "node scripts/serve-docs.js"
   },
   "keywords": [
     "discord",
@@ -74,7 +79,9 @@
     "jest": "^29.0.0",
     "ts-jest": "^29.0.0",
     "ts-node": "^10.9.0",
-    "node-fetch": "^3.0.0"
+    "node-fetch": "^3.0.0",
+    "typedoc": "^0.25.0",
+    "typedoc-plugin-markdown": "^3.17.0"
   },
   "engines": {
     "node": ">=16.0.0"

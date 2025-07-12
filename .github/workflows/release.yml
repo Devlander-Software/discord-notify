@@ -1,0 +1,204 @@
+name: Release
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, 'skip ci') }}
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run tests
+      run: npm run test:all
+
+    - name: Build package
+      run: npm run build
+
+    - name: Check for version bump
+      id: check_version
+      run: |
+        # Check if package.json version has changed
+        git diff HEAD~1 package.json | grep '"version"' || echo "No version change detected"
+        
+        # Get current version
+        CURRENT_VERSION=$(node -p "require('./package.json').version")
+        echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+        
+        # Check if this version already has a tag
+        if git tag -l "v$CURRENT_VERSION" | grep -q "v$CURRENT_VERSION"; then
+          echo "version_exists=true" >> $GITHUB_OUTPUT
+          echo "✅ Version v$CURRENT_VERSION already exists"
+        else
+          echo "version_exists=false" >> $GITHUB_OUTPUT
+          echo "🆕 New version v$CURRENT_VERSION detected"
+        fi
+
+    - name: Generate changelog
+      if: steps.check_version.outputs.version_exists == 'false'
+      run: |
+        npm run changelog:generate
+        
+        # Read the generated changelog entry
+        CHANGELOG_ENTRY=$(node -e "
+          const fs = require('fs');
+          const changelog = fs.readFileSync('CHANGELOG.md', 'utf8');
+          const version = require('./package.json').version;
+          const start = changelog.indexOf(\`## [\${version}]\`);
+          const nextVersion = changelog.indexOf('## [', start + 1);
+          const end = nextVersion !== -1 ? nextVersion : changelog.length;
+          const entry = changelog.substring(start, end).trim();
+          console.log(entry);
+        ")
+        echo "CHANGELOG_ENTRY<<EOF" >> $GITHUB_ENV
+        echo "$CHANGELOG_ENTRY" >> $GITHUB_ENV
+        echo "EOF" >> $GITHUB_ENV
+
+    - name: Generate release assets
+      if: steps.check_version.outputs.version_exists == 'false'
+      run: |
+        # Create release notes file
+        cat > RELEASE_NOTES.md << 'EOF'
+        # Discord Notify v${{ steps.check_version.outputs.current_version }}
+
+        ## 🚀 What's New
+
+        ${{ env.CHANGELOG_ENTRY }}
+
+        ## 📦 Installation
+
+        ```bash
+        npm install discord-notify@${{ steps.check_version.outputs.current_version }}
+        ```
+
+        ## 🎯 Quick Start
+
+        ```typescript
+        import DiscordNotifyFactory from 'discord-notify';
+
+        const notifier = DiscordNotifyFactory({
+          webhookUrl: 'YOUR_DISCORD_WEBHOOK_URL'
+        });
+
+        await notifier.success('Hello from Discord Notify!');
+        ```
+
+        ## 🔗 Links
+
+        - [📚 Documentation](https://github.com/${{ github.repository }}#readme)
+        - [📋 Full Changelog](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md)
+        - [🐛 Report Issues](https://github.com/${{ github.repository }}/issues)
+        - [💬 Join Discord Community](https://bit.ly/devlander-discord-invite)
+        - [📦 NPM Package](https://www.npmjs.com/package/discord-notify)
+
+        ## 🎉 Community
+
+        Join our growing developer community:
+        - [Discord Server](https://bit.ly/devlander-discord-invite)
+        - [GitHub Discussions](https://github.com/orgs/Devlander-Software/discussions)
+        - [Twitch Streams](https://bit.ly/devlander-twitch)
+        - [Twitter](https://bit.ly/landonwjohnson-on-twitter)
+
+        ---
+
+        **Full Changelog**: https://github.com/${{ github.repository }}/compare/v${{ steps.check_version.outputs.current_version }}...v${{ steps.check_version.outputs.current_version }}
+        EOF
+
+        # Create package stats
+        echo "## 📊 Package Statistics" >> RELEASE_NOTES.md
+        echo "" >> RELEASE_NOTES.md
+        echo "- **Version**: ${{ steps.check_version.outputs.current_version }}" >> RELEASE_NOTES.md
+        echo "- **Node.js**: >=16.0.0" >> RELEASE_NOTES.md
+        echo "- **TypeScript**: Full support" >> RELEASE_NOTES.md
+        echo "- **Dependencies**: Zero external dependencies" >> RELEASE_NOTES.md
+        echo "- **License**: MIT" >> RELEASE_NOTES.md
+
+    - name: Create Release
+      if: steps.check_version.outputs.version_exists == 'false'
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ steps.check_version.outputs.current_version }}
+        release_name: Discord Notify v${{ steps.check_version.outputs.current_version }}
+        body_path: RELEASE_NOTES.md
+        draft: false
+        prerelease: false
+
+    - name: Upload Release Assets
+      if: steps.check_version.outputs.version_exists == 'false'
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/index.js
+        asset_name: discord-notify-${{ steps.check_version.outputs.current_version }}.js
+        asset_content_type: application/javascript
+
+    - name: Upload TypeScript Definitions
+      if: steps.check_version.outputs.version_exists == 'false'
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./dist/index.d.ts
+        asset_name: discord-notify-${{ steps.check_version.outputs.current_version }}.d.ts
+        asset_content_type: text/plain
+
+    - name: Create Release Summary
+      if: steps.check_version.outputs.version_exists == 'false'
+      run: |
+        echo "## 🎉 Release Summary" >> RELEASE_NOTES.md
+        echo "" >> RELEASE_NOTES.md
+        echo "✅ **Release v${{ steps.check_version.outputs.current_version }} created successfully!**" >> RELEASE_NOTES.md
+        echo "" >> RELEASE_NOTES.md
+        echo "### 📋 What was done:" >> RELEASE_NOTES.md
+        echo "- ✅ Tests passed" >> RELEASE_NOTES.md
+        echo "- ✅ Package built" >> RELEASE_NOTES.md
+        echo "- ✅ Changelog generated" >> RELEASE_NOTES.md
+        echo "- ✅ GitHub release created" >> RELEASE_NOTES.md
+        echo "- ✅ Release assets uploaded" >> RELEASE_NOTES.md
+        echo "- ✅ NPM deployment triggered" >> RELEASE_NOTES.md
+
+    - name: Trigger NPM Deploy
+      if: steps.check_version.outputs.version_exists == 'false'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.actions.createWorkflowDispatch({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            workflow_id: 'deploy.yml',
+            ref: 'main',
+            inputs: {
+              version: '${{ steps.check_version.outputs.current_version }}'
+            }
+          })
+
+    - name: Post Release Summary
+      if: steps.check_version.outputs.version_exists == 'false'
+      run: |
+        echo "🎉 **Discord Notify v${{ steps.check_version.outputs.current_version }} released successfully!**"
+        echo ""
+        echo "📦 **NPM Package**: https://www.npmjs.com/package/discord-notify"
+        echo "📋 **Release Notes**: https://github.com/${{ github.repository }}/releases/tag/v${{ steps.check_version.outputs.current_version }}"
+        echo "📚 **Documentation**: https://github.com/${{ github.repository }}#readme"
+        echo "💬 **Community**: https://bit.ly/devlander-discord-invite" 

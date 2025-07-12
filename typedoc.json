@@ -1,0 +1,39 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "out": "docs/api",
+  "theme": "default",
+  "name": "Discord Notify API Documentation",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": false,
+  "includeVersion": true,
+  "categorizeByGroup": true,
+  "categoryOrder": [
+    "Configuration",
+    "Core",
+    "Methods",
+    "Types",
+    "Utilities",
+    "*"
+  ],
+  "readme": "docs/API_README.md",
+  "plugin": ["typedoc-plugin-markdown"],
+  "hidePageTitle": true,
+  "searchInComments": true,
+  "sort": ["source-order"],
+  "validation": {
+    "invalidLink": true,
+    "notExported": true
+  },
+  "githubPages": false,
+  "gitRevision": "main",
+  "gitRemote": "origin",
+  "cleanOutputDir": true,
+  "skipErrorChecking": false,
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/tests/**",
+    "**/scripts/**"
+  ]
+} 
