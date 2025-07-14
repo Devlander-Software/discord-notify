@@ -1,6 +1,6 @@
 {
   "name": "discord-notify",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A Discord API-compliant notification service for Node.js applications with file attachments, thread support, and rich embeds",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
