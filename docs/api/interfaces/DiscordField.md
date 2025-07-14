@@ -4,7 +4,7 @@
 
 [Discord Notify API Documentation](../globals.md) / DiscordField
 
-Defined in: index.ts:41
+Defined in: [index.ts:41](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L41)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: index.ts:41
 
 > **name**: `string`
 
-Defined in: index.ts:42
+Defined in: [index.ts:42](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L42)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: index.ts:42
 
 > **value**: `string`
 
-Defined in: index.ts:43
+Defined in: [index.ts:43](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L43)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: index.ts:43
 
 > `optional` **inline**: `boolean`
 
-Defined in: index.ts:44
+Defined in: [index.ts:44](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L44)

@@ -6,7 +6,7 @@
 
 > **default**(`config`): [`DiscordNotify`](../interfaces/DiscordNotify.md)
 
-Defined in: index.ts:103
+Defined in: [index.ts:103](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L103)
 
 ## Parameters
 

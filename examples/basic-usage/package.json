@@ -1,0 +1,25 @@
+{
+  "name": "discord-notify-basic-example",
+  "version": "1.0.0",
+  "description": "Basic example of using discord-notify in a Node.js application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [
+    "discord-notify",
+    "example",
+    "notifications",
+    "discord"
+  ],
+  "author": "Discord Notify Team",
+  "license": "MIT",
+  "dependencies": {
+    "discord-notify": "^1.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+} 

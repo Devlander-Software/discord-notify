@@ -4,7 +4,7 @@
 
 [Discord Notify API Documentation](../globals.md) / DiscordNotify
 
-Defined in: index.ts:5
+Defined in: [index.ts:5](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L5)
 
 ## Extends
 
@@ -16,7 +16,7 @@ Defined in: index.ts:5
 
 > **send**(`args`): `Promise`\<`void`\>
 
-Defined in: index.ts:2
+Defined in: [index.ts:2](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L2)
 
 #### Parameters
 
@@ -38,7 +38,7 @@ Defined in: index.ts:2
 
 > **extend**(`args`): [`DiscordNotifier`](DiscordNotifier.md)
 
-Defined in: index.ts:6
+Defined in: [index.ts:6](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L6)
 
 #### Parameters
 
@@ -56,7 +56,7 @@ Defined in: index.ts:6
 
 > **success**(`args`): `Promise`\<`void`\>
 
-Defined in: index.ts:7
+Defined in: [index.ts:7](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L7)
 
 #### Parameters
 
@@ -74,7 +74,7 @@ Defined in: index.ts:7
 
 > **error**(`args`): `Promise`\<`void`\>
 
-Defined in: index.ts:8
+Defined in: [index.ts:8](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L8)
 
 #### Parameters
 
@@ -92,7 +92,7 @@ Defined in: index.ts:8
 
 > **alert**(`args`): `Promise`\<`void`\>
 
-Defined in: index.ts:9
+Defined in: [index.ts:9](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L9)
 
 #### Parameters
 
@@ -110,7 +110,7 @@ Defined in: index.ts:9
 
 > **info**(`args`): `Promise`\<`void`\>
 
-Defined in: index.ts:10
+Defined in: [index.ts:10](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L10)
 
 #### Parameters
 
@@ -128,7 +128,7 @@ Defined in: index.ts:10
 
 > **sendFile**(`args`, `file`): `Promise`\<`void`\>
 
-Defined in: index.ts:11
+Defined in: [index.ts:11](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L11)
 
 #### Parameters
 
@@ -150,7 +150,7 @@ Defined in: index.ts:11
 
 > **sendToThread**(`args`, `threadId`): `Promise`\<`void`\>
 
-Defined in: index.ts:12
+Defined in: [index.ts:12](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L12)
 
 #### Parameters
 

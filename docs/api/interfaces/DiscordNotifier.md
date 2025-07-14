@@ -4,7 +4,7 @@
 
 [Discord Notify API Documentation](../globals.md) / DiscordNotifier
 
-Defined in: index.ts:1
+Defined in: [index.ts:1](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L1)
 
 ## Extended by
 
@@ -16,7 +16,7 @@ Defined in: index.ts:1
 
 > **send**(`args`): `Promise`\<`void`\>
 
-Defined in: index.ts:2
+Defined in: [index.ts:2](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L2)
 
 #### Parameters
 

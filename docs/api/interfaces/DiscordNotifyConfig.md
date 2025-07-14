@@ -4,7 +4,7 @@
 
 [Discord Notify API Documentation](../globals.md) / DiscordNotifyConfig
 
-Defined in: index.ts:86
+Defined in: [index.ts:86](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L86)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: index.ts:86
 
 > **webhookUrl**: `string`
 
-Defined in: index.ts:87
+Defined in: [index.ts:87](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L87)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: index.ts:87
 
 > `optional` **appName**: `string`
 
-Defined in: index.ts:88
+Defined in: [index.ts:88](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L88)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: index.ts:88
 
 > `optional` **environment**: `string`
 
-Defined in: index.ts:89
+Defined in: [index.ts:89](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L89)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: index.ts:89
 
 > `optional` **username**: `string`
 
-Defined in: index.ts:90
+Defined in: [index.ts:90](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L90)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: index.ts:90
 
 > `optional` **avatarUrl**: `string`
 
-Defined in: index.ts:91
+Defined in: [index.ts:91](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L91)
 
 ***
 
@@ -52,4 +52,4 @@ Defined in: index.ts:91
 
 > `optional` **threadId**: `string`
 
-Defined in: index.ts:92
+Defined in: [index.ts:92](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L92)

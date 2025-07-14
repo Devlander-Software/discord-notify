@@ -4,7 +4,7 @@
 
 [Discord Notify API Documentation](../globals.md) / DiscordWebhookPayload
 
-Defined in: index.ts:77
+Defined in: [index.ts:77](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L77)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: index.ts:77
 
 > `optional` **content**: `string`
 
-Defined in: index.ts:78
+Defined in: [index.ts:78](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L78)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: index.ts:78
 
 > `optional` **username**: `string`
 
-Defined in: index.ts:79
+Defined in: [index.ts:79](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L79)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: index.ts:79
 
 > `optional` **avatar\_url**: `string`
 
-Defined in: index.ts:80
+Defined in: [index.ts:80](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L80)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: index.ts:80
 
 > `optional` **embeds**: [`DiscordEmbed`](DiscordEmbed.md)[]
 
-Defined in: index.ts:81
+Defined in: [index.ts:81](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L81)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: index.ts:81
 
 > `optional` **thread\_id**: `string`
 
-Defined in: index.ts:82
+Defined in: [index.ts:82](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L82)
 
 ***
 
@@ -52,4 +52,4 @@ Defined in: index.ts:82
 
 > `optional` **files**: [`FileAttachment`](FileAttachment.md)[]
 
-Defined in: index.ts:83
+Defined in: [index.ts:83](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L83)

@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import DiscordNotifyFactory from '../src/index';
 
 // Integration test runner

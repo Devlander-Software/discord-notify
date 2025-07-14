@@ -4,7 +4,7 @@
 
 [Discord Notify API Documentation](../globals.md) / SendArgs
 
-Defined in: index.ts:15
+Defined in: [index.ts:15](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L15)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: index.ts:15
 
 > `optional` **content**: `string`
 
-Defined in: index.ts:16
+Defined in: [index.ts:16](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L16)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: index.ts:16
 
 > `optional` **text**: `string`
 
-Defined in: index.ts:17
+Defined in: [index.ts:17](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L17)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: index.ts:17
 
 > `optional` **title**: `string`
 
-Defined in: index.ts:18
+Defined in: [index.ts:18](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L18)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: index.ts:18
 
 > `optional` **description**: `string`
 
-Defined in: index.ts:19
+Defined in: [index.ts:19](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L19)
 
 ***
 
@@ -44,7 +44,7 @@ Defined in: index.ts:19
 
 > `optional` **color**: `number`
 
-Defined in: index.ts:20
+Defined in: [index.ts:20](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L20)
 
 ***
 
@@ -52,7 +52,7 @@ Defined in: index.ts:20
 
 > `optional` **fields**: [`DiscordField`](DiscordField.md)[]
 
-Defined in: index.ts:21
+Defined in: [index.ts:21](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L21)
 
 ***
 
@@ -60,7 +60,7 @@ Defined in: index.ts:21
 
 > `optional` **timestamp**: `string`
 
-Defined in: index.ts:22
+Defined in: [index.ts:22](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L22)
 
 ***
 
@@ -68,7 +68,7 @@ Defined in: index.ts:22
 
 > `optional` **footer**: `object`
 
-Defined in: index.ts:23
+Defined in: [index.ts:23](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L23)
 
 #### text
 
@@ -84,7 +84,7 @@ Defined in: index.ts:23
 
 > `optional` **thumbnail**: `object`
 
-Defined in: index.ts:27
+Defined in: [index.ts:27](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L27)
 
 #### url
 
@@ -96,7 +96,7 @@ Defined in: index.ts:27
 
 > `optional` **image**: `object`
 
-Defined in: index.ts:30
+Defined in: [index.ts:30](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L30)
 
 #### url
 
@@ -108,7 +108,7 @@ Defined in: index.ts:30
 
 > `optional` **author**: `object`
 
-Defined in: index.ts:33
+Defined in: [index.ts:33](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L33)
 
 #### name
 
@@ -128,4 +128,4 @@ Defined in: index.ts:33
 
 > `optional` **url**: `string`
 
-Defined in: index.ts:38
+Defined in: [index.ts:38](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L38)

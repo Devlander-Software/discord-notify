@@ -4,7 +4,7 @@
 
 [Discord Notify API Documentation](../globals.md) / FileAttachment
 
-Defined in: index.ts:71
+Defined in: [index.ts:71](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L71)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: index.ts:71
 
 > **name**: `string`
 
-Defined in: index.ts:72
+Defined in: [index.ts:72](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L72)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: index.ts:72
 
 > **data**: `string` \| `Uint8Array`\<`ArrayBufferLike`\>
 
-Defined in: index.ts:73
+Defined in: [index.ts:73](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L73)
 
 ***
 
@@ -28,4 +28,4 @@ Defined in: index.ts:73
 
 > `optional` **contentType**: `string`
 
-Defined in: index.ts:74
+Defined in: [index.ts:74](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L74)

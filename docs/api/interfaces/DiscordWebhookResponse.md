@@ -4,7 +4,7 @@
 
 [Discord Notify API Documentation](../globals.md) / DiscordWebhookResponse
 
-Defined in: index.ts:95
+Defined in: [index.ts:95](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L95)
 
 ## Properties
 
@@ -12,7 +12,7 @@ Defined in: index.ts:95
 
 > **success**: `boolean`
 
-Defined in: index.ts:96
+Defined in: [index.ts:96](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L96)
 
 ***
 
@@ -20,7 +20,7 @@ Defined in: index.ts:96
 
 > `optional` **status**: `number`
 
-Defined in: index.ts:97
+Defined in: [index.ts:97](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L97)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: index.ts:97
 
 > `optional` **statusText**: `string`
 
-Defined in: index.ts:98
+Defined in: [index.ts:98](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L98)
 
 ***
 
@@ -36,7 +36,7 @@ Defined in: index.ts:98
 
 > `optional` **error**: `string`
 
-Defined in: index.ts:99
+Defined in: [index.ts:99](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L99)
 
 ***
 
@@ -44,4 +44,4 @@ Defined in: index.ts:99
 
 > `optional` **messageId**: `string`
 
-Defined in: index.ts:100
+Defined in: [index.ts:100](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L100)

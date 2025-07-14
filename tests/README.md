@@ -50,11 +50,35 @@ npm run test:integration
 - Custom username/avatar
 - Error handling with real API
 
-### 4. All Tests (`npm run test:all`)
+### 4. E2E Installation Tests (`npm run test:e2e`)
+Comprehensive end-to-end tests that create temporary projects, install the package from NPM, and test real functionality.
+
+```bash
+npm run test:e2e
+```
+
+**What it tests:**
+- Package installation from NPM registry
+- CommonJS project compatibility
+- TypeScript project compatibility
+- ES Modules compatibility
+- Yarn package manager support
+- Node.js version compatibility
+- Production environment testing
+- Package.json dependencies validation
+
+### 5. All Tests (`npm run test:all`)
 Runs both basic and unit tests.
 
 ```bash
 npm run test:all
+```
+
+### 6. Full Test Suite (`npm run test:full`)
+Runs all tests including E2E installation tests.
+
+```bash
+npm run test:full
 ```
 
 ## Setting Up Integration Tests
@@ -114,6 +138,16 @@ The test suite covers:
 - [x] Rich embed functionality
 - [x] Custom configurations
 - [x] Performance testing
+
+### ✅ E2E Installation Testing
+- [x] Package installation from NPM
+- [x] CommonJS project compatibility
+- [x] TypeScript project compatibility
+- [x] ES Modules compatibility
+- [x] Yarn package manager support
+- [x] Node.js version compatibility
+- [x] Production environment testing
+- [x] Package.json dependencies validation
 
 ## Test Output Examples
 
