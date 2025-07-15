@@ -2,7 +2,7 @@
 
 ## Overview
 
-Discord Notify is a comprehensive Discord webhook notification service for Node.js applications. Built with TypeScript and zero dependencies, it provides a modern alternative to Slack notification libraries, specifically designed for Discord's rich API capabilities and webhook features.
+Discord Notify is a comprehensive Discord webhook notification service for Node.js applications. Built with TypeScript and zero dependencies, it provides a modern Discord notification service specifically designed for Discord's rich API capabilities and webhook features.
 
 ### Key Features
 
@@ -14,14 +14,9 @@ Discord Notify is a comprehensive Discord webhook notification service for Node.
 - **Zero Dependencies** - Lightweight and fast using native Node.js fetch
 - **Error Handling** - Comprehensive error management and reporting
 
-### Discord vs Slack Webhooks
+### Built for Discord
 
-This package was inspired by popular Slack notification libraries like:
-- `@slack/webhook`
-- `node-slack-notify`
-- `slack-notify`
-
-However, Discord Notify is specifically designed for Discord's superior webhook capabilities, including:
+Discord Notify is specifically designed for Discord's powerful webhook capabilities, including:
 - Rich embeds with fields and formatting
 - Direct file attachments
 - Native thread support

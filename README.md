@@ -2,7 +2,7 @@
 
 A powerful Discord API-compliant notification service for Node.js applications. Send beautiful, formatted notifications to Discord channels using webhooks with full Discord API compliance. Perfect for logging, monitoring, alerts, bot notifications, and team collaboration.
 
-**Discord Notify** provides a modern, feature-rich alternative to Slack notification libraries, leveraging Discord's superior webhook capabilities for richer, more engaging notifications.
+**Discord Notify** provides a modern, feature-rich Discord webhook notification service with zero dependencies and full TypeScript support.
 
 ## Package Statistics
 
@@ -28,7 +28,7 @@ A powerful Discord API-compliant notification service for Node.js applications. 
 ## Key Features
 
 ### Core Features
-- **Simple and easy to use** - Get started in minutes, just like Slack libraries
+- **Simple and easy to use** - Get started in minutes with clean, intuitive API
 - **Pre-built notification types** - Success, error, alert, info with custom colors
 - **TypeScript support** - Full type definitions and IntelliSense
 - **Zero dependencies** - Lightweight and fast, uses native Node.js fetch
@@ -79,39 +79,40 @@ Discord Notify is perfect for:
 - **File Sharing** - Send reports, logs, and files directly to Discord channels
 - **Team Collaboration** - Keep your team informed with organized notifications
 
-## Discord vs Slack: Why Discord Notify?
+## Why Discord Notify?
 
-While both Discord and Slack offer webhook capabilities, Discord Notify takes advantage of Discord's superior features:
+Discord Notify is designed specifically for Discord's powerful webhook capabilities, providing features that make Discord notifications superior:
 
-| Feature | Discord Notify | Slack Notify |
-|---------|---------------|--------------|
-| **Rich Embeds** | Full support with fields, thumbnails, images | Limited formatting |
-| **File Attachments** | Direct file uploads | Requires external hosting |
-| **Thread Support** | Native thread integration | Limited threading |
-| **Custom Colors** | 16-bit color support | Basic color options |
-| **Username/Avatar** | Full override support | Limited customization |
-| **Message Structure** | Structured embeds | Plain text with basic formatting |
-| **API Compliance** | Full Discord API support | Basic webhook support |
-| **Performance** | Zero dependencies | Often requires external libs |
+| Feature | Discord Notify |
+|---------|---------------|
+| **Rich Embeds** | Full support with fields, thumbnails, images |
+| **File Attachments** | Direct file uploads without external hosting |
+| **Thread Support** | Native thread integration for organized conversations |
+| **Custom Colors** | 16-bit color support for better visual hierarchy |
+| **Username/Avatar** | Full override support for brand consistency |
+| **Message Structure** | Structured embeds with rich formatting |
+| **API Compliance** | Full Discord API support with error handling |
+| **Performance** | Zero dependencies using native Node.js fetch |
 
-**Discord Notify** provides a more modern, feature-rich notification experience compared to traditional Slack notification libraries.
+**Discord Notify** provides a modern, feature-rich notification experience designed specifically for Discord's capabilities.
 
-## Evolution from Slack Notify
+## Modern Discord Notifications
 
-### The Inspiration
-Discord Notify was born from the need for better notification capabilities in modern development workflows. While Slack notification libraries like `@slack/webhook` and `node-slack-notify` served their purpose, they were limited by Slack's basic webhook capabilities.
+### Built for Discord
+Discord Notify was designed from the ground up to leverage Discord's powerful webhook capabilities, providing features that make Discord notifications superior to traditional notification systems.
 
-### The Evolution
-Discord Notify takes the simplicity and ease-of-use of Slack notification libraries and enhances them with Discord's powerful features:
+### Key Advantages
+Discord Notify takes full advantage of Discord's modern features:
 
-- **From Simple Text** to **Rich Embeds** with structured data
-- **From Basic Colors** to **16-bit Color Support** for better visual hierarchy
-- **From External Files** to **Direct File Attachments** for seamless sharing
-- **From Limited Threading** to **Native Thread Support** for organized conversations
-- **From Basic Customization** to **Full Username/Avatar Override** for brand consistency
+- **Rich Embeds** with structured data and formatting
+- **16-bit Color Support** for better visual hierarchy
+- **Direct File Attachments** for seamless sharing
+- **Native Thread Support** for organized conversations
+- **Full Username/Avatar Override** for brand consistency
+- **Zero Dependencies** for lightweight, fast performance
 
 ### The Result
-A notification service that's as easy to use as Slack libraries but with the power and flexibility of Discord's modern API.
+A notification service that's specifically designed for Discord's capabilities, providing rich, engaging notifications with modern development practices.
 
 ## Manual Setup
 1. **Clone the repository:**

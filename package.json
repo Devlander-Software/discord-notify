@@ -1,7 +1,7 @@
 {
   "name": "discord-notify",
   "version": "1.1.0",
-  "description": "Modern Discord webhook notification service for Node.js. Send rich embeds, file attachments, and threaded messages with zero dependencies. Perfect for monitoring, alerts, and team notifications.",
+  "description": "Modern Discord webhook notification service for Node.js. Send rich embeds, file attachments, and threaded messages with zero dependencies. Built specifically for Discord's powerful webhook capabilities.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

@@ -2,9 +2,9 @@
 
 ## Overview
 
-Welcome to the Discord Notify API documentation! This package provides a comprehensive Discord webhook notification service for Node.js applications, inspired by popular Slack notification libraries but designed specifically for Discord's rich API capabilities and webhook features.
+Welcome to the Discord Notify API documentation! This package provides a comprehensive Discord webhook notification service for Node.js applications, designed specifically for Discord's rich API capabilities and webhook features.
 
-**Discord Notify** offers a modern alternative to Slack notification libraries, leveraging Discord's superior webhook capabilities for richer, more engaging notifications with zero dependencies.
+**Discord Notify** offers a modern Discord notification service, leveraging Discord's powerful webhook capabilities for rich, engaging notifications with zero dependencies.
 
 ## Quick Start
 
