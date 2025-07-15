@@ -35,6 +35,9 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
 
 # Collections
 collections:
@@ -48,4 +51,25 @@ defaults:
       path: ""
       type: "docs"
     values:
-      layout: "default" 
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Include files
+include:
+  - _pages
+  - _layouts
+  - _includes
+
+# Exclude files
+exclude:
+  - node_modules
+  - dist
+  - tests
+  - scripts
+  - examples
+  - .git
+  - .github 

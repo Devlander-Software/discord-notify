@@ -1,3 +1,9 @@
+---
+layout: page
+title: API Documentation
+description: Complete API reference for Discord Notify with TypeScript interfaces and examples
+---
+
 # Discord Notify API Documentation - Complete Reference
 
 ## Overview
