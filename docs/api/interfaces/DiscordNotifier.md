@@ -1,29 +1,33 @@
-[**Discord Notify API Documentation v1.0.1**](../README.md)
+[Discord Notify API Documentation - v1.1.0](../README.md) / [Exports](../modules.md) / DiscordNotifier
 
-***
+## Hierarchy
 
-[Discord Notify API Documentation](../globals.md) / DiscordNotifier
+- **`DiscordNotifier`**
 
-Defined in: [index.ts:1](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L1)
+  ↳ [`DiscordNotify`](DiscordNotify.md)
 
-## Extended by
+## Table of contents
 
-- [`DiscordNotify`](DiscordNotify.md)
+### Methods
+
+- [send](DiscordNotifier.md#send)
 
 ## Methods
 
-### send()
+### send
 
-> **send**(`args`): `Promise`\<`void`\>
-
-Defined in: [index.ts:2](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L2)
+▸ **send**(`args`): `Promise`\<`void`\>
 
 #### Parameters
 
-##### args
-
-`string` | [`SendArgs`](SendArgs.md)
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| [`SendArgs`](SendArgs.md) |
 
 #### Returns
 
 `Promise`\<`void`\>
+
+#### Defined in
+
+[index.ts:2](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L2)

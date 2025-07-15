@@ -1,31 +1,39 @@
-[**Discord Notify API Documentation v1.0.1**](../README.md)
+[Discord Notify API Documentation - v1.1.0](../README.md) / [Exports](../modules.md) / FileAttachment
 
-***
+## Table of contents
 
-[Discord Notify API Documentation](../globals.md) / FileAttachment
+### Properties
 
-Defined in: [index.ts:71](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L71)
+- [name](FileAttachment.md#name)
+- [data](FileAttachment.md#data)
+- [contentType](FileAttachment.md#contenttype)
 
 ## Properties
 
 ### name
 
-> **name**: `string`
+• **name**: `string`
 
-Defined in: [index.ts:72](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L72)
+#### Defined in
 
-***
+[index.ts:72](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L72)
+
+___
 
 ### data
 
-> **data**: `string` \| `Uint8Array`\<`ArrayBufferLike`\>
+• **data**: `string` \| `Uint8Array`
 
-Defined in: [index.ts:73](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L73)
+#### Defined in
 
-***
+[index.ts:73](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L73)
 
-### contentType?
+___
 
-> `optional` **contentType**: `string`
+### contentType
 
-Defined in: [index.ts:74](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L74)
+• `Optional` **contentType**: `string`
+
+#### Defined in
+
+[index.ts:74](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L74)

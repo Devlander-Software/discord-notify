@@ -1,131 +1,165 @@
-[**Discord Notify API Documentation v1.0.1**](../README.md)
+[Discord Notify API Documentation - v1.1.0](../README.md) / [Exports](../modules.md) / SendArgs
 
-***
+## Table of contents
 
-[Discord Notify API Documentation](../globals.md) / SendArgs
+### Properties
 
-Defined in: [index.ts:15](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L15)
+- [content](SendArgs.md#content)
+- [text](SendArgs.md#text)
+- [title](SendArgs.md#title)
+- [description](SendArgs.md#description)
+- [color](SendArgs.md#color)
+- [fields](SendArgs.md#fields)
+- [timestamp](SendArgs.md#timestamp)
+- [footer](SendArgs.md#footer)
+- [thumbnail](SendArgs.md#thumbnail)
+- [image](SendArgs.md#image)
+- [author](SendArgs.md#author)
+- [url](SendArgs.md#url)
 
 ## Properties
 
-### content?
+### content
 
-> `optional` **content**: `string`
+• `Optional` **content**: `string`
 
-Defined in: [index.ts:16](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L16)
+#### Defined in
 
-***
+[index.ts:16](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L16)
 
-### text?
+___
 
-> `optional` **text**: `string`
+### text
 
-Defined in: [index.ts:17](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L17)
+• `Optional` **text**: `string`
 
-***
+#### Defined in
 
-### title?
+[index.ts:17](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L17)
 
-> `optional` **title**: `string`
+___
 
-Defined in: [index.ts:18](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L18)
+### title
 
-***
+• `Optional` **title**: `string`
 
-### description?
+#### Defined in
 
-> `optional` **description**: `string`
+[index.ts:18](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L18)
 
-Defined in: [index.ts:19](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L19)
+___
 
-***
+### description
 
-### color?
+• `Optional` **description**: `string`
 
-> `optional` **color**: `number`
+#### Defined in
 
-Defined in: [index.ts:20](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L20)
+[index.ts:19](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L19)
 
-***
+___
 
-### fields?
+### color
 
-> `optional` **fields**: [`DiscordField`](DiscordField.md)[]
+• `Optional` **color**: `number`
 
-Defined in: [index.ts:21](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L21)
+#### Defined in
 
-***
+[index.ts:20](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L20)
 
-### timestamp?
+___
 
-> `optional` **timestamp**: `string`
+### fields
 
-Defined in: [index.ts:22](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L22)
+• `Optional` **fields**: [`DiscordField`](DiscordField.md)[]
 
-***
+#### Defined in
 
-### footer?
+[index.ts:21](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L21)
 
-> `optional` **footer**: `object`
+___
 
-Defined in: [index.ts:23](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L23)
+### timestamp
 
-#### text
+• `Optional` **timestamp**: `string`
 
-> **text**: `string`
+#### Defined in
 
-#### icon\_url?
+[index.ts:22](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L22)
 
-> `optional` **icon\_url**: `string`
+___
 
-***
+### footer
 
-### thumbnail?
+• `Optional` **footer**: `Object`
 
-> `optional` **thumbnail**: `object`
+#### Type declaration
 
-Defined in: [index.ts:27](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L27)
+| Name | Type |
+| :------ | :------ |
+| `text` | `string` |
+| `icon_url?` | `string` |
 
-#### url
+#### Defined in
 
-> **url**: `string`
+[index.ts:23](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L23)
 
-***
+___
 
-### image?
+### thumbnail
 
-> `optional` **image**: `object`
+• `Optional` **thumbnail**: `Object`
 
-Defined in: [index.ts:30](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L30)
+#### Type declaration
 
-#### url
+| Name | Type |
+| :------ | :------ |
+| `url` | `string` |
 
-> **url**: `string`
+#### Defined in
 
-***
+[index.ts:27](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L27)
 
-### author?
+___
 
-> `optional` **author**: `object`
+### image
 
-Defined in: [index.ts:33](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L33)
+• `Optional` **image**: `Object`
 
-#### name
+#### Type declaration
 
-> **name**: `string`
+| Name | Type |
+| :------ | :------ |
+| `url` | `string` |
 
-#### url?
+#### Defined in
 
-> `optional` **url**: `string`
+[index.ts:30](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L30)
 
-#### icon\_url?
+___
 
-> `optional` **icon\_url**: `string`
+### author
 
-***
+• `Optional` **author**: `Object`
 
-### url?
+#### Type declaration
 
-> `optional` **url**: `string`
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `url?` | `string` |
+| `icon_url?` | `string` |
 
-Defined in: [index.ts:38](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L38)
+#### Defined in
+
+[index.ts:33](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L33)
+
+___
+
+### url
+
+• `Optional` **url**: `string`
+
+#### Defined in
+
+[index.ts:38](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L38)

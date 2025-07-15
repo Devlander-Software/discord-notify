@@ -1,55 +1,72 @@
-[**Discord Notify API Documentation v1.0.1**](../README.md)
+[Discord Notify API Documentation - v1.1.0](../README.md) / [Exports](../modules.md) / DiscordWebhookPayload
 
-***
+## Table of contents
 
-[Discord Notify API Documentation](../globals.md) / DiscordWebhookPayload
+### Properties
 
-Defined in: [index.ts:77](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L77)
+- [content](DiscordWebhookPayload.md#content)
+- [username](DiscordWebhookPayload.md#username)
+- [avatar\_url](DiscordWebhookPayload.md#avatar_url)
+- [embeds](DiscordWebhookPayload.md#embeds)
+- [thread\_id](DiscordWebhookPayload.md#thread_id)
+- [files](DiscordWebhookPayload.md#files)
 
 ## Properties
 
-### content?
+### content
 
-> `optional` **content**: `string`
+• `Optional` **content**: `string`
 
-Defined in: [index.ts:78](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L78)
+#### Defined in
 
-***
+[index.ts:78](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L78)
 
-### username?
+___
 
-> `optional` **username**: `string`
+### username
 
-Defined in: [index.ts:79](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L79)
+• `Optional` **username**: `string`
 
-***
+#### Defined in
 
-### avatar\_url?
+[index.ts:79](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L79)
 
-> `optional` **avatar\_url**: `string`
+___
 
-Defined in: [index.ts:80](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L80)
+### avatar\_url
 
-***
+• `Optional` **avatar\_url**: `string`
 
-### embeds?
+#### Defined in
 
-> `optional` **embeds**: [`DiscordEmbed`](DiscordEmbed.md)[]
+[index.ts:80](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L80)
 
-Defined in: [index.ts:81](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L81)
+___
 
-***
+### embeds
 
-### thread\_id?
+• `Optional` **embeds**: [`DiscordEmbed`](DiscordEmbed.md)[]
 
-> `optional` **thread\_id**: `string`
+#### Defined in
 
-Defined in: [index.ts:82](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L82)
+[index.ts:81](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L81)
 
-***
+___
 
-### files?
+### thread\_id
 
-> `optional` **files**: [`FileAttachment`](FileAttachment.md)[]
+• `Optional` **thread\_id**: `string`
 
-Defined in: [index.ts:83](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L83)
+#### Defined in
+
+[index.ts:82](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L82)
+
+___
+
+### files
+
+• `Optional` **files**: [`FileAttachment`](FileAttachment.md)[]
+
+#### Defined in
+
+[index.ts:83](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L83)

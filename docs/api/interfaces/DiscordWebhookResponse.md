@@ -1,47 +1,61 @@
-[**Discord Notify API Documentation v1.0.1**](../README.md)
+[Discord Notify API Documentation - v1.1.0](../README.md) / [Exports](../modules.md) / DiscordWebhookResponse
 
-***
+## Table of contents
 
-[Discord Notify API Documentation](../globals.md) / DiscordWebhookResponse
+### Properties
 
-Defined in: [index.ts:95](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L95)
+- [success](DiscordWebhookResponse.md#success)
+- [status](DiscordWebhookResponse.md#status)
+- [statusText](DiscordWebhookResponse.md#statustext)
+- [error](DiscordWebhookResponse.md#error)
+- [messageId](DiscordWebhookResponse.md#messageid)
 
 ## Properties
 
 ### success
 
-> **success**: `boolean`
+• **success**: `boolean`
 
-Defined in: [index.ts:96](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L96)
+#### Defined in
 
-***
+[index.ts:96](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L96)
 
-### status?
+___
 
-> `optional` **status**: `number`
+### status
 
-Defined in: [index.ts:97](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L97)
+• `Optional` **status**: `number`
 
-***
+#### Defined in
 
-### statusText?
+[index.ts:97](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L97)
 
-> `optional` **statusText**: `string`
+___
 
-Defined in: [index.ts:98](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L98)
+### statusText
 
-***
+• `Optional` **statusText**: `string`
 
-### error?
+#### Defined in
 
-> `optional` **error**: `string`
+[index.ts:98](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L98)
 
-Defined in: [index.ts:99](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L99)
+___
 
-***
+### error
 
-### messageId?
+• `Optional` **error**: `string`
 
-> `optional` **messageId**: `string`
+#### Defined in
 
-Defined in: [index.ts:100](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L100)
+[index.ts:99](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L99)
+
+___
+
+### messageId
+
+• `Optional` **messageId**: `string`
+
+#### Defined in
+
+[index.ts:100](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L100)

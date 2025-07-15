@@ -1,28 +1,35 @@
-[**Discord Notify API Documentation v1.0.1**](../README.md)
+[Discord Notify API Documentation - v1.1.0](../README.md) / [Exports](../modules.md) / DiscordNotify
 
-***
-
-[Discord Notify API Documentation](../globals.md) / DiscordNotify
-
-Defined in: [index.ts:5](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L5)
-
-## Extends
+## Hierarchy
 
 - [`DiscordNotifier`](DiscordNotifier.md)
 
+  ↳ **`DiscordNotify`**
+
+## Table of contents
+
+### Methods
+
+- [send](DiscordNotify.md#send)
+- [extend](DiscordNotify.md#extend)
+- [success](DiscordNotify.md#success)
+- [error](DiscordNotify.md#error)
+- [alert](DiscordNotify.md#alert)
+- [info](DiscordNotify.md#info)
+- [sendFile](DiscordNotify.md#sendfile)
+- [sendToThread](DiscordNotify.md#sendtothread)
+
 ## Methods
 
-### send()
+### send
 
-> **send**(`args`): `Promise`\<`void`\>
-
-Defined in: [index.ts:2](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L2)
+▸ **send**(`args`): `Promise`\<`void`\>
 
 #### Parameters
 
-##### args
-
-`string` | [`SendArgs`](SendArgs.md)
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| [`SendArgs`](SendArgs.md) |
 
 #### Returns
 
@@ -30,138 +37,150 @@ Defined in: [index.ts:2](https://github.com/Devlander-Software/discord-notify/bl
 
 #### Inherited from
 
-[`DiscordNotifier`](DiscordNotifier.md).[`send`](DiscordNotifier.md#send)
+[DiscordNotifier](DiscordNotifier.md).[send](DiscordNotifier.md#send)
 
-***
+#### Defined in
 
-### extend()
+[index.ts:2](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L2)
 
-> **extend**(`args`): [`DiscordNotifier`](DiscordNotifier.md)
+___
 
-Defined in: [index.ts:6](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L6)
+### extend
+
+▸ **extend**(`args`): [`DiscordNotifier`](DiscordNotifier.md)
 
 #### Parameters
 
-##### args
-
-`string` | [`SendArgs`](SendArgs.md)
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| [`SendArgs`](SendArgs.md) |
 
 #### Returns
 
 [`DiscordNotifier`](DiscordNotifier.md)
 
-***
+#### Defined in
 
-### success()
+[index.ts:6](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L6)
 
-> **success**(`args`): `Promise`\<`void`\>
+___
 
-Defined in: [index.ts:7](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L7)
+### success
+
+▸ **success**(`args`): `Promise`\<`void`\>
 
 #### Parameters
 
-##### args
-
-`string` | [`SendArgs`](SendArgs.md)
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| [`SendArgs`](SendArgs.md) |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-***
+#### Defined in
 
-### error()
+[index.ts:7](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L7)
 
-> **error**(`args`): `Promise`\<`void`\>
+___
 
-Defined in: [index.ts:8](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L8)
+### error
+
+▸ **error**(`args`): `Promise`\<`void`\>
 
 #### Parameters
 
-##### args
-
-`string` | [`SendArgs`](SendArgs.md)
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| [`SendArgs`](SendArgs.md) |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-***
+#### Defined in
 
-### alert()
+[index.ts:8](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L8)
 
-> **alert**(`args`): `Promise`\<`void`\>
+___
 
-Defined in: [index.ts:9](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L9)
+### alert
+
+▸ **alert**(`args`): `Promise`\<`void`\>
 
 #### Parameters
 
-##### args
-
-`string` | [`SendArgs`](SendArgs.md)
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| [`SendArgs`](SendArgs.md) |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-***
+#### Defined in
 
-### info()
+[index.ts:9](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L9)
 
-> **info**(`args`): `Promise`\<`void`\>
+___
 
-Defined in: [index.ts:10](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L10)
+### info
+
+▸ **info**(`args`): `Promise`\<`void`\>
 
 #### Parameters
 
-##### args
-
-`string` | [`SendArgs`](SendArgs.md)
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| [`SendArgs`](SendArgs.md) |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-***
+#### Defined in
 
-### sendFile()
+[index.ts:10](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L10)
 
-> **sendFile**(`args`, `file`): `Promise`\<`void`\>
+___
 
-Defined in: [index.ts:11](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L11)
+### sendFile
+
+▸ **sendFile**(`args`, `file`): `Promise`\<`void`\>
 
 #### Parameters
 
-##### args
-
-`string` | [`SendArgs`](SendArgs.md)
-
-##### file
-
-[`FileAttachment`](FileAttachment.md)
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| [`SendArgs`](SendArgs.md) |
+| `file` | [`FileAttachment`](FileAttachment.md) |
 
 #### Returns
 
 `Promise`\<`void`\>
 
-***
+#### Defined in
 
-### sendToThread()
+[index.ts:11](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L11)
 
-> **sendToThread**(`args`, `threadId`): `Promise`\<`void`\>
+___
 
-Defined in: [index.ts:12](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L12)
+### sendToThread
+
+▸ **sendToThread**(`args`, `threadId`): `Promise`\<`void`\>
 
 #### Parameters
 
-##### args
-
-`string` | [`SendArgs`](SendArgs.md)
-
-##### threadId
-
-`string`
+| Name | Type |
+| :------ | :------ |
+| `args` | `string` \| [`SendArgs`](SendArgs.md) |
+| `threadId` | `string` |
 
 #### Returns
 
 `Promise`\<`void`\>
+
+#### Defined in
+
+[index.ts:12](https://github.com/Devlander-Software/discord-notify/blob/main/src/index.ts#L12)
