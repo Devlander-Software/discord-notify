@@ -72,19 +72,19 @@
     "file-attachments",
     "thread-support"
   ],
-  "author": "Your Name",
+  "author": "Devlander Software",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/discord-notify.git"
+    "url": "git+https://github.com/Devlander-Software/discord-notify.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/discord-notify/issues"
+    "url": "https://github.com/Devlander-Software/discord-notify/issues"
   },
-  "homepage": "https://github.com/yourusername/discord-notify#readme",
+  "homepage": "https://github.com/Devlander-Software/discord-notify#readme",
   "funding": {
     "type": "github",
-    "url": "https://github.com/sponsors/yourusername"
+    "url": "https://github.com/sponsors/Devlander-Software"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
@@ -99,8 +99,5 @@
   },
   "engines": {
     "node": ">=16.0.0"
-  },
-  "dependencies": {
-    "dotenv": "^17.2.0"
   }
 }
