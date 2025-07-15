@@ -1,3 +1,9 @@
+---
+layout: page
+title: GitHub Releases Guide
+description: Guide for managing GitHub releases and automated deployment
+---
+
 # Discord Notify GitHub Releases Management Guide
 
 This guide covers the comprehensive GitHub release system for Discord Notify, including automated releases, manual releases, and release management for professional package distribution.

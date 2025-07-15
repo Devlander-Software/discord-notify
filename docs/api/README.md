@@ -1,3 +1,9 @@
+---
+layout: page
+title: API Reference
+description: Complete TypeDoc API reference for Discord Notify
+---
+
 **Discord Notify API Documentation v1.0.1**
 
 ***

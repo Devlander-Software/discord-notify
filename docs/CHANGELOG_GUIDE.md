@@ -1,3 +1,9 @@
+---
+layout: page
+title: Changelog Guide
+description: Guide for managing changelog and automated release process
+---
+
 # Discord Notify Changelog Management Guide
 
 This guide explains how to maintain the changelog for the Discord Notify package and use the automated changelog generation tools for effective version management and release tracking.

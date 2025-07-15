@@ -1,3 +1,9 @@
+---
+layout: page
+title: Globals
+description: Global types and utilities for Discord Notify
+---
+
 [**Discord Notify API Documentation v1.0.1**](README.md)
 
 ***

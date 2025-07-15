@@ -1,3 +1,9 @@
+---
+layout: page
+title: API Readme
+description: Complete guide to Discord Notify API with examples and best practices
+---
+
 # Discord Notify API Documentation - Complete Guide
 
 ## Overview
