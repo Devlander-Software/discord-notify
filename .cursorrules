@@ -1,0 +1,153 @@
+# Discord Notify - Cursor Rules
+
+## Project Overview
+This is a Discord webhook notification service for Node.js applications. Built with TypeScript, zero dependencies, and full Discord API compliance.
+
+## Git Commit Standards
+
+### ALWAYS Use Conventional Commits
+Every commit message MUST follow the conventional commits format for automatic changelog generation:
+
+```
+<type>(<scope>): <description>
+
+[optional body]
+
+[optional footer]
+```
+
+### Commit Types
+- `feat:` - New features (goes in "Added" section)
+- `fix:` - Bug fixes (goes in "Fixed" section)
+- `docs:` - Documentation changes (goes in "Documentation" section)
+- `style:` - Code style changes (goes in "Style" section)
+- `refactor:` - Code refactoring (goes in "Refactored" section)
+- `test:` - Test changes (goes in "Tests" section)
+- `chore:` - Maintenance tasks (goes in "Chore" section)
+- `perf:` - Performance improvements (goes in "Performance" section)
+- `ci:` - CI/CD changes (goes in "CI/CD" section)
+- `build:` - Build system changes (goes in "Build" section)
+- `revert:` - Reverted changes (goes in "Reverted" section)
+
+### Examples
+```bash
+# New feature
+git commit -m "feat: add file attachment support"
+
+# Bug fix
+git commit -m "fix: handle empty webhook URL gracefully"
+
+# Documentation
+git commit -m "docs: update installation guide"
+
+# Breaking change
+git commit -m "feat!: change webhook URL parameter to config object"
+
+# With scope
+git commit -m "feat(webhook): add thread support"
+git commit -m "fix(types): correct SendArgs interface"
+```
+
+### Changelog Generation
+ALWAYS use the automated changelog generator after making changes:
+
+```bash
+# Generate changelog from conventional commits
+npm run changelog:generate
+
+# This automatically categorizes commits and updates CHANGELOG.md
+```
+
+## Code Standards
+
+### TypeScript
+- Use strict TypeScript configuration
+- Provide full type definitions for all interfaces
+- Use proper error handling with typed responses
+- Maintain zero dependencies policy
+
+### File Structure
+- `src/` - Source code
+- `dist/` - Compiled output (gitignored)
+- `tests/` - Test files
+- `docs/` - Documentation
+- `scripts/` - Build and utility scripts
+- `examples/` - Example projects
+
+### Testing
+- Write comprehensive unit tests
+- Include integration tests for Discord API
+- Maintain E2E testing infrastructure
+- Run full test suite before commits
+
+### Documentation
+- Keep README.md updated with examples
+- Maintain comprehensive API documentation
+- Update changelog for all changes
+- Include migration guides for breaking changes
+
+## Development Workflow
+
+### Before Committing
+1. Run tests: `npm run test:full`
+2. Check linting: `npm run lint`
+3. Build package: `npm run build`
+4. Ensure conventional commit format
+
+### After Committing
+1. Generate changelog: `npm run changelog:generate`
+2. Review generated changelog entry
+3. Push changes to trigger CI/CD
+
+### Release Process
+1. Use conventional commits throughout development
+2. Run `npm run changelog:generate` to update changelog
+3. Use `npm run release:interactive` for releases
+4. Verify automated deployment
+
+## Key Principles
+
+### SEO and Documentation
+- Maintain professional, emoji-free documentation
+- Use comprehensive keywords for discoverability
+- Keep documentation up-to-date with code changes
+- Provide clear examples and use cases
+
+### Quality Assurance
+- Zero external dependencies
+- Full TypeScript support
+- Comprehensive error handling
+- Professional release management
+
+### Community Standards
+- Follow Discord API best practices
+- Maintain backward compatibility
+- Provide clear migration guides
+- Support multiple Node.js environments
+
+## Important Commands
+
+```bash
+# Development
+npm run build          # Build TypeScript
+npm run test:full      # Run all tests
+npm run lint           # Check TypeScript
+npm run changelog:generate  # Generate changelog
+
+# Release
+npm run release:interactive  # Interactive release
+npm run release:patch       # Patch release
+npm run release:minor       # Minor release
+npm run release:major       # Major release
+
+# Documentation
+npm run docs:generate  # Generate API docs
+npm run docs:serve     # Serve docs locally
+```
+
+## Remember
+- ALWAYS use conventional commits for automatic changelog generation
+- NEVER manually edit changelog entries - use the generator
+- Keep documentation professional and emoji-free
+- Maintain zero dependencies policy
+- Provide comprehensive TypeScript support 

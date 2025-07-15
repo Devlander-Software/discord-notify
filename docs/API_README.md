@@ -1,32 +1,33 @@
-# Discord Notify API Documentation
+# Discord Notify API Documentation - Complete Guide
 
 ## Overview
 
-Discord Notify is a comprehensive notification service for Discord webhooks, inspired by popular Slack notification libraries but designed specifically for Discord's rich API capabilities.
+Discord Notify is a comprehensive Discord webhook notification service for Node.js applications. Built with TypeScript and zero dependencies, it provides a modern alternative to Slack notification libraries, specifically designed for Discord's rich API capabilities and webhook features.
 
 ### Key Features
 
-- **Discord API Compliant** - Full webhook payload support
+- **Discord API Compliant** - Full webhook payload support with error handling
 - **Rich Embed Support** - Fields, thumbnails, images, and authors
-- **File Attachments** - Send files with notifications
+- **File Attachments** - Direct file uploads without external hosting
 - **Thread Support** - Organized conversations in Discord threads
 - **TypeScript Support** - Full type definitions and IntelliSense
-- **Zero Dependencies** - Lightweight and fast
-- **Error Handling** - Comprehensive error management
+- **Zero Dependencies** - Lightweight and fast using native Node.js fetch
+- **Error Handling** - Comprehensive error management and reporting
 
-### Inspiration
+### Discord vs Slack Webhooks
 
 This package was inspired by popular Slack notification libraries like:
 - `@slack/webhook`
 - `node-slack-notify`
 - `slack-notify`
 
-However, Discord Notify is specifically designed for Discord's rich webhook capabilities, including:
+However, Discord Notify is specifically designed for Discord's superior webhook capabilities, including:
 - Rich embeds with fields and formatting
-- File attachments
-- Thread support
+- Direct file attachments
+- Native thread support
 - Username and avatar overrides
 - Discord-specific API features
+- 16-bit color support
 
 ## Quick Start
 
@@ -43,14 +44,16 @@ await notifier.success('Hello from Discord Notify!');
 ## Core Concepts
 
 ### Factory Pattern
-The package uses a factory pattern to create notifier instances with specific configurations.
+The package uses a factory pattern to create notifier instances with specific configurations, allowing for multiple webhook configurations in a single application.
 
 ### Discord Webhooks
 Discord webhooks allow you to send messages to channels without needing a full bot. They're perfect for:
-- Application monitoring
-- Log forwarding
+- Application monitoring and alerts
+- Log forwarding and error reporting
 - Deployment notifications
-- Error reporting
+- System monitoring
+- Team collaboration
+- CI/CD integration
 
 ### Rich Embeds
 Discord's rich embeds provide structured, visually appealing messages with:
@@ -59,19 +62,20 @@ Discord's rich embeds provide structured, visually appealing messages with:
 - Thumbnails and images
 - Authors and footers
 - Custom colors and timestamps
+- URL linking
 
 ## API Structure
 
 The main export is `DiscordNotifyFactory`, which creates a `DiscordNotifier` instance with the following methods:
 
-- `send()` - Send custom messages
-- `success()` - Send success notifications
-- `error()` - Send error notifications
-- `alert()` - Send alert notifications
-- `info()` - Send info notifications
-- `extend()` - Create extended notifiers
+- `send()` - Send custom messages with rich embeds
+- `success()` - Send success notifications with green styling
+- `error()` - Send error notifications with red styling
+- `alert()` - Send alert notifications with orange styling
+- `info()` - Send info notifications with blue styling
+- `extend()` - Create extended notifiers for multiple embeds
 - `sendFile()` - Send files with notifications
-- `sendToThread()` - Send to specific threads
+- `sendToThread()` - Send to specific Discord threads
 
 ## Configuration
 
@@ -81,7 +85,7 @@ The factory accepts a configuration object with:
 - `environment` (optional) - Environment for footer
 - `username` (optional) - Override webhook username
 - `avatarUrl` (optional) - Override webhook avatar
-- `threadId` (optional) - Default thread ID
+- `threadId` (optional) - Default thread ID for all messages
 
 ## Examples
 
@@ -97,20 +101,25 @@ await notifier.success('Deployment completed successfully!');
 ### Rich Embeds
 ```typescript
 await notifier.send({
-  title: 'Server Status',
-  description: 'Current server metrics',
+  title: 'Server Status Report',
+  description: 'Current server metrics and health status',
   fields: [
-    { name: 'CPU', value: '45%', inline: true },
-    { name: 'Memory', value: '67%', inline: true }
+    { name: 'CPU Usage', value: '45%', inline: true },
+    { name: 'Memory Usage', value: '67%', inline: true },
+    { name: 'Disk Usage', value: '23%', inline: true },
+    { name: 'Active Users', value: '1,234', inline: false }
   ],
-  color: 0x00ff00
+  color: 0x00ff00,
+  thumbnail: {
+    url: 'https://example.com/server-icon.png'
+  }
 });
 ```
 
 ### File Attachments
 ```typescript
 await notifier.sendFile(
-  { title: 'Error Log', description: 'Application errors' },
+  { title: 'Error Log Report', description: 'Application errors for today' },
   {
     name: 'errors.log',
     data: 'Error details...',
@@ -119,35 +128,79 @@ await notifier.sendFile(
 );
 ```
 
+### Thread Support
+```typescript
+await notifier.sendToThread(
+  { title: 'Thread Update', description: 'New information in thread' },
+  '1234567890123456789'
+);
+```
+
+### Monitoring Integration
+```typescript
+// Create a monitoring system
+const monitoringNotifier = DiscordNotifyFactory({
+  webhookUrl: process.env.DISCORD_WEBHOOK_URL,
+  appName: 'System Monitor',
+  environment: 'production'
+});
+
+// Send health check results
+await monitoringNotifier.send({
+  title: 'Health Check Results',
+  description: 'System health status',
+  fields: [
+    { name: 'Database', value: 'Connected', inline: true },
+    { name: 'API Server', value: 'Healthy', inline: true },
+    { name: 'Response Time', value: '45ms', inline: true }
+  ],
+  color: 0x00ff00
+});
+```
+
 ## Error Handling
 
 The package includes comprehensive error handling:
 - Invalid webhook URLs
-- Network failures
-- Discord API errors
-- Rate limiting
+- Network failures and timeouts
+- Discord API errors and rate limiting
 - File upload errors
+- Malformed payload errors
 
-All methods return detailed error information when available.
+All methods return detailed error information when available, making debugging easier.
 
 ## TypeScript Support
 
 Full TypeScript support with:
-- Complete type definitions
-- IntelliSense support
+- Complete type definitions for all interfaces
+- IntelliSense support in modern IDEs
 - Compile-time error checking
-- Interface documentation
+- Interface documentation and examples
+- Generic type support for custom configurations
 
-## Performance
+## Performance and Dependencies
 
 - Zero external dependencies
-- Uses native Node.js fetch
-- Lightweight and fast
+- Uses native Node.js fetch API
+- Lightweight and fast execution
 - Minimal memory footprint
+- Optimized for production use
+
+## Use Cases
+
+Discord Notify is ideal for:
+- Application monitoring and alerting
+- Deployment notifications
+- Error reporting and logging
+- System health monitoring
+- Team collaboration tools
+- CI/CD pipeline integration
+- Bot development
+- File sharing and reporting
 
 ## Contributing
 
-Contributions are welcome! Please see the main README for contribution guidelines.
+Contributions are welcome! Please see the main README for contribution guidelines and development setup.
 
 ## License
 

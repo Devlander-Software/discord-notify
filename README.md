@@ -1,34 +1,39 @@
-# Discord Notify
+# Discord Notify - Discord Webhook Notification Service for Node.js
 
-A Discord API-compliant notification service for Node.js applications. Send beautiful, formatted notifications to Discord channels using webhooks with full Discord API compliance. Perfect for logging, monitoring, alerts, and bot notifications.
+A powerful Discord API-compliant notification service for Node.js applications. Send beautiful, formatted notifications to Discord channels using webhooks with full Discord API compliance. Perfect for logging, monitoring, alerts, bot notifications, and team collaboration.
 
-> **Inspired by Slack Notify** - This package was inspired by popular Slack notification libraries like `@slack/webhook`, `node-slack-notify`, and `slack-notify`, but designed specifically for Discord's rich webhook capabilities and API features. While Slack focuses on simple text messages, Discord Notify leverages Discord's powerful embed system for richer, more engaging notifications.
+**Discord Notify** provides a modern, feature-rich alternative to Slack notification libraries, leveraging Discord's superior webhook capabilities for richer, more engaging notifications.
 
-## Hits
+## Package Statistics
+
 [![npm downloads](https://img.shields.io/npm/dm/discord-notify.svg)](https://www.npmjs.com/package/discord-notify)  
-[![wakatime](https://wakatime.com/badge/user/bd50b6c5-e0ca-4937-83b3-ab2d13adbc73/project/02037e5a-4e97-4cd5-872c-df41ad2d6b67.svg)](https://wakatime.com/badge/user/bd50b6c5-e0ca-4937-83b3-ab2d13adbc73/project/02037e5a-4e97-4cd5-872c-df41ad2d6b67)
+[![npm version](https://img.shields.io/npm/v/discord-notify.svg)](https://www.npmjs.com/package/discord-notify)
+[![Node.js version](https://img.shields.io/node/v/discord-notify.svg)](https://nodejs.org/)
+[![License](https://img.shields.io/npm/l/discord-notify.svg)](https://opensource.org/licenses/MIT)
 
-## Join My Dev Community
+## Community and Support
+
 [![Join Devlander on Discord](https://img.shields.io/badge/Discord-Devlander-%235865F2)](https://bit.ly/devlander-discord-invite)  
 [![Join Devlander on Twitch](https://img.shields.io/twitch/status/devlander)](https://bit.ly/devlander-twitch)  
 [![Reddit](https://img.shields.io/badge/Reddit-r%2Fsoftwareengineersutah-orange?logo=reddit)](https://www.reddit.com/r/softwareengineersutah/)
 [![Follow Landon Johnson On Twitter](https://img.shields.io/twitter/follow/landonwjohnson.svg?style=social&label=Follow)](https://bit.ly/landonwjohnson-on-twitter)  
 [![Join the discussion on Github](https://img.shields.io/badge/Github%20Discussions%20%26%20Support-Chat%20now!-blue)](https://github.com/orgs/Devlander-Software/discussions)
 
-## 📋 Changelog
+## Development Standards
+
 [![Keep a Changelog](https://img.shields.io/badge/Keep%20a%20Changelog-1.0.0-brightgreen.svg)](https://keepachangelog.com/)
 [![Semantic Versioning](https://img.shields.io/badge/Semantic%20Versioning-2.0.0-brightgreen.svg)](https://semver.org/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-brightgreen.svg)](https://conventionalcommits.org/)  
 
-## Features
+## Key Features
 
-### 🚀 Core Features
+### Core Features
 - **Simple and easy to use** - Get started in minutes, just like Slack libraries
 - **Pre-built notification types** - Success, error, alert, info with custom colors
 - **TypeScript support** - Full type definitions and IntelliSense
 - **Zero dependencies** - Lightweight and fast, uses native Node.js fetch
 
-### 🎨 Discord-Specific Features
+### Discord-Specific Features
 - **Rich embed support** - Fields, thumbnails, images, and authors (Discord exclusive)
 - **File attachment support** - Direct file uploads without external hosting
 - **Thread support** - Native Discord thread integration for organized conversations
@@ -36,7 +41,7 @@ A Discord API-compliant notification service for Node.js applications. Send beau
 - **16-bit color support** - Rich color palette for better visual hierarchy
 - **Discord API compliant** - Full webhook payload support with error handling
 
-### 🔧 Advanced Features
+### Advanced Features
 - **Configurable app name and environment** - Professional notifications with context
 - **Extensible architecture** - Create custom notification workflows
 - **Monitoring ready** - Perfect for application monitoring and alerts
@@ -49,7 +54,17 @@ A Discord API-compliant notification service for Node.js applications. Send beau
 npm install discord-notify
 ```
 
-## 🎯 Use Cases
+### Yarn Install
+```bash
+yarn add discord-notify
+```
+
+### PNPM Install
+```bash
+pnpm add discord-notify
+```
+
+## Use Cases
 
 Discord Notify is perfect for:
 
@@ -64,24 +79,24 @@ Discord Notify is perfect for:
 - **File Sharing** - Send reports, logs, and files directly to Discord channels
 - **Team Collaboration** - Keep your team informed with organized notifications
 
-## 🔄 Discord vs Slack: Why Discord Notify?
+## Discord vs Slack: Why Discord Notify?
 
 While both Discord and Slack offer webhook capabilities, Discord Notify takes advantage of Discord's superior features:
 
 | Feature | Discord Notify | Slack Notify |
 |---------|---------------|--------------|
-| **Rich Embeds** | ✅ Full support with fields, thumbnails, images | ❌ Limited formatting |
-| **File Attachments** | ✅ Direct file uploads | ❌ Requires external hosting |
-| **Thread Support** | ✅ Native thread integration | ❌ Limited threading |
-| **Custom Colors** | ✅ 16-bit color support | ❌ Basic color options |
-| **Username/Avatar** | ✅ Full override support | ❌ Limited customization |
-| **Message Structure** | ✅ Structured embeds | ❌ Plain text with basic formatting |
-| **API Compliance** | ✅ Full Discord API support | ❌ Basic webhook support |
-| **Performance** | ✅ Zero dependencies | ❌ Often requires external libs |
+| **Rich Embeds** | Full support with fields, thumbnails, images | Limited formatting |
+| **File Attachments** | Direct file uploads | Requires external hosting |
+| **Thread Support** | Native thread integration | Limited threading |
+| **Custom Colors** | 16-bit color support | Basic color options |
+| **Username/Avatar** | Full override support | Limited customization |
+| **Message Structure** | Structured embeds | Plain text with basic formatting |
+| **API Compliance** | Full Discord API support | Basic webhook support |
+| **Performance** | Zero dependencies | Often requires external libs |
 
 **Discord Notify** provides a more modern, feature-rich notification experience compared to traditional Slack notification libraries.
 
-## 🚀 Evolution from Slack Notify
+## Evolution from Slack Notify
 
 ### The Inspiration
 Discord Notify was born from the need for better notification capabilities in modern development workflows. While Slack notification libraries like `@slack/webhook` and `node-slack-notify` served their purpose, they were limited by Slack's basic webhook capabilities.
@@ -89,16 +104,16 @@ Discord Notify was born from the need for better notification capabilities in mo
 ### The Evolution
 Discord Notify takes the simplicity and ease-of-use of Slack notification libraries and enhances them with Discord's powerful features:
 
-- **From Simple Text** → **Rich Embeds** with structured data
-- **From Basic Colors** → **16-bit Color Support** for better visual hierarchy
-- **From External Files** → **Direct File Attachments** for seamless sharing
-- **From Limited Threading** → **Native Thread Support** for organized conversations
-- **From Basic Customization** → **Full Username/Avatar Override** for brand consistency
+- **From Simple Text** to **Rich Embeds** with structured data
+- **From Basic Colors** to **16-bit Color Support** for better visual hierarchy
+- **From External Files** to **Direct File Attachments** for seamless sharing
+- **From Limited Threading** to **Native Thread Support** for organized conversations
+- **From Basic Customization** to **Full Username/Avatar Override** for brand consistency
 
 ### The Result
 A notification service that's as easy to use as Slack libraries but with the power and flexibility of Discord's modern API.
 
-### Manual Setup
+## Manual Setup
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/discord-notify.git
@@ -140,7 +155,7 @@ const notifier = DiscordNotifyFactory({
 });
 
 // Test the connection
-await notifier.success('🎉 Webhook is working!');
+await notifier.success('Webhook is working!');
 ```
 
 ## Quick Start
@@ -306,8 +321,8 @@ setInterval(async () => {
       description: 'All systems operational',
       color: 0x00ff00,
       fields: [
-        { name: 'Database', value: '✅ Connected', inline: true },
-        { name: 'Server', value: '✅ Healthy', inline: true },
+        { name: 'Database', value: 'Connected', inline: true },
+        { name: 'Server', value: 'Healthy', inline: true },
         { name: 'Response Time', value: `${dbStatus.responseTime}ms`, inline: true }
       ]
     }, monitoringThreadId);
@@ -317,8 +332,8 @@ setInterval(async () => {
       description: 'Issues detected in system',
       color: 0xff0000,
       fields: [
-        { name: 'Database', value: dbStatus.connected ? '✅ Connected' : '❌ Failed', inline: true },
-        { name: 'Server', value: serverStatus.healthy ? '✅ Healthy' : '❌ Issues', inline: true },
+        { name: 'Database', value: dbStatus.connected ? 'Connected' : 'Failed', inline: true },
+        { name: 'Server', value: serverStatus.healthy ? 'Healthy' : 'Issues', inline: true },
         { name: 'Error', value: dbStatus.error || serverStatus.error || 'Unknown error', inline: false }
       ]
     }, monitoringThreadId);
@@ -375,19 +390,19 @@ await notifier.send({
 
 #### `success(args: string | SendArgs): Promise<void>`
 
-Sends a success notification with green color and ✅ emoji.
+Sends a success notification with green color and success emoji.
 
 #### `error(args: string | SendArgs): Promise<void>`
 
-Sends an error notification with red color and 🚨 emoji.
+Sends an error notification with red color and error emoji.
 
 #### `alert(args: string | SendArgs): Promise<void>`
 
-Sends an alert notification with orange color and ⚠️ emoji.
+Sends an alert notification with orange color and warning emoji.
 
 #### `info(args: string | SendArgs): Promise<void>`
 
-Sends an info notification with light blue color and ℹ️ emoji.
+Sends an info notification with light blue color and info emoji.
 
 #### `extend(args: string | SendArgs): DiscordNotifier`
 
@@ -497,172 +512,57 @@ npm run test:unit
 export DISCORD_WEBHOOK_URL="your_webhook_url"
 npm run test:integration
 
+# E2E installation tests
+npm run test:e2e
+
 # All tests
-npm run test:all
+npm run test:full
 ```
 
-### Test Coverage
-The test suite covers:
-- ✅ Core functionality
-- ✅ Error handling
-- ✅ Type safety
-- ✅ Integration with Discord API
-- ✅ Performance testing
+## Examples
 
-See [tests/README.md](tests/README.md) for detailed testing information.
+Check out the [examples directory](./examples/) for complete working examples:
 
-## 📋 Changelog Management
-
-### Automated Changelog Generation
-This project uses automated changelog generation based on [Conventional Commits](https://conventionalcommits.org/):
-
-```bash
-# Generate changelog from git commits
-npm run changelog:generate
-
-# View current changelog
-cat CHANGELOG.md
-```
-
-### Release Process
-```bash
-# Patch release (1.0.0 → 1.0.1)
-npm run release:patch
-
-# Minor release (1.0.1 → 1.1.0)
-npm run release:minor
-
-# Major release (1.1.0 → 2.0.0)
-npm run release:major
-```
-
-### Commit Message Format
-Use conventional commit format for automatic categorization:
-
-```bash
-# New feature
-git commit -m "feat: add file attachment support"
-
-# Bug fix
-git commit -m "fix: handle empty webhook URL gracefully"
-
-# Documentation
-git commit -m "docs: update installation guide"
-
-# Breaking change
-git commit -m "feat!: change webhook URL parameter to config object"
-```
-
-### Changelog Features
-- 📝 **Automatic categorization** by commit type
-- 🏷️ **Semantic versioning** support
-- 🔄 **GitHub integration** with releases
-- 📊 **Detailed change tracking** with commit hashes
-- 🎯 **Migration guides** for breaking changes
-
-### GitHub Releases
-- 🚀 **Automated releases** triggered by version bumps
-- 🎯 **Interactive release manager** for manual control
-- 📄 **Professional release templates** with comprehensive notes
-- 📦 **Asset management** with automatic file uploads
-- 🔄 **Full CI/CD integration** with testing and deployment
-
-See [docs/CHANGELOG_GUIDE.md](docs/CHANGELOG_GUIDE.md) for comprehensive changelog management documentation.
-See [docs/GITHUB_RELEASES.md](docs/GITHUB_RELEASES.md) for detailed GitHub release information.
-See [docs/API.md](docs/API.md) for complete API documentation and TypeScript interfaces.
-
-## 📚 Documentation
-
-- **[🌐 Live Documentation](https://devlander-software.github.io/discord-notify/)** - Hosted on GitHub Pages
-- **[📖 API Documentation](docs/API.md)** - Complete API reference with TypeScript interfaces
-- **[📋 Changelog Guide](docs/CHANGELOG_GUIDE.md)** - How to manage changelog and releases
-- **[🚀 GitHub Releases](docs/GITHUB_RELEASES.md)** - Automated release process guide
-- **[📦 NPM Package](https://www.npmjs.com/package/discord-notify)** - Package on npm registry
-
-## 🔄 Migrating from Slack Libraries
-
-If you're currently using Slack notification libraries, migrating to Discord Notify is straightforward:
-
-### From `@slack/webhook`
-```javascript
-// Before (Slack)
-const { IncomingWebhook } = require('@slack/webhook');
-const webhook = new IncomingWebhook(process.env.SLACK_WEBHOOK_URL);
-await webhook.send('Hello from Slack!');
-
-// After (Discord)
-import DiscordNotifyFactory from 'discord-notify';
-const notifier = DiscordNotifyFactory({ webhookUrl: process.env.DISCORD_WEBHOOK_URL });
-await notifier.send('Hello from Discord!');
-```
-
-### From `node-slack-notify`
-```javascript
-// Before (Slack)
-const slack = require('slack-notify')(process.env.SLACK_WEBHOOK_URL);
-slack.alert('Server is down!');
-
-// After (Discord)
-import DiscordNotifyFactory from 'discord-notify';
-const notifier = DiscordNotifyFactory({ webhookUrl: process.env.DISCORD_WEBHOOK_URL });
-await notifier.alert('Server is down!');
-```
-
-### Key Differences
-- **Async/Await** - Discord Notify uses modern async patterns
-- **Rich Embeds** - Take advantage of Discord's embed system
-- **File Attachments** - Direct file uploads without external hosting
-- **Thread Support** - Organize notifications in Discord threads
-
-## Error Handling
-
-The package includes comprehensive error handling that returns detailed information about webhook failures:
-
-```typescript
-// The webhook methods return response information
-const response = await notifier.send('Test message');
-// Response includes success status, error details, and message ID
-```
-
-## Thread Support
-
-To use thread functionality:
-1. Create a thread in your Discord channel
-2. Right-click the thread and copy its ID
-3. Use the thread ID in `sendToThread()` or set it as default in config
+- [Basic Usage Example](./examples/basic-usage/) - CommonJS example with comprehensive features
+- [TypeScript Usage Example](./examples/typescript-usage/) - Full TypeScript example with type safety
 
 ## Contributing
 
+Contributions are welcome! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
+
+### Development Setup
+
 1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Clone your fork: `git clone https://github.com/yourusername/discord-notify.git`
+3. Install dependencies: `npm install`
+4. Create a feature branch: `git checkout -b feature/amazing-feature`
+5. Make your changes and add tests
+6. Run tests: `npm run test:full`
+7. Commit your changes: `git commit -m 'feat: add amazing feature'`
+8. Push to your fork: `git push origin feature/amazing-feature`
+9. Open a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Support
 
-### Join Our Discord Community! 🎉
+- **Documentation**: [API Reference](./docs/API.md)
+- **Issues**: [GitHub Issues](https://github.com/yourusername/discord-notify/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/orgs/Devlander-Software/discussions)
+- **Discord Community**: [Join our Discord](https://bit.ly/devlander-discord-invite)
 
-**Need help? Want to share your projects? Join our growing developer community!**
+## Related Projects
 
-[![Join Devlander on Discord](https://img.shields.io/badge/Discord-Devlander-%235865F2?style=for-the-badge&logo=discord)](https://bit.ly/devlander-discord-invite)
+- [Discord.js](https://discord.js.org/) - Full Discord bot framework
+- [Discord Webhooks](https://discord.com/developers/docs/resources/webhook) - Official Discord webhook documentation
+- [Node.js Fetch API](https://nodejs.org/api/globals.html#fetch) - Native fetch implementation
 
-**What you'll find in our Discord:**
-- 🚀 **Project Showcases** - Share what you're building with Discord Notify
-- 💡 **Code Reviews** - Get feedback on your implementations
-- 🐛 **Bug Reports** - Report issues and get help
-- 📚 **Tutorials** - Learn advanced usage patterns
-- 🤝 **Networking** - Connect with other developers
-- 🎯 **Feature Requests** - Suggest new features for Discord Notify
+## Changelog
 
-**Quick Links:**
-- [Discord Server](https://bit.ly/devlander-discord-invite) - Main community hub
-- [GitHub Discussions](https://github.com/orgs/Devlander-Software/discussions) - Technical discussions
-- [Twitch Streams](https://bit.ly/devlander-twitch) - Live coding sessions
-- [Twitter](https://bit.ly/landonwjohnson-on-twitter) - Updates and announcements
+See [CHANGELOG.md](./CHANGELOG.md) for a complete list of changes and version history.
 
-If you encounter any issues or have questions, please [open an issue](https://github.com/yourusername/discord-notify/issues) on GitHub or join our Discord community for real-time support! 
+---
+
+**Discord Notify** - Modern Discord notifications for Node.js applications. Built with TypeScript, zero dependencies, and full Discord API compliance. 

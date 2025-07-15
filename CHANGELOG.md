@@ -5,38 +5,48 @@ All notable changes to the Discord Notify package will be documented in this fil
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1] - 2025-07-12
+## [Unreleased]
 
 ### Added
-- 📚 **Complete TypeDoc API Documentation**
-  - Comprehensive API reference with TypeScript interfaces
+- **SEO Optimization** - Complete documentation overhaul for better search engine visibility
+- **Professional Formatting** - Removed all emojis for clean, professional appearance
+- **Enhanced Keywords** - Improved package.json keywords for better discoverability
+- **Comprehensive Documentation** - Updated all documentation files with SEO improvements
+
+### Changed
+- **README.md** - Complete SEO overhaul with better structure and keywords
+- **Package.json** - Enhanced description and optimized keywords
+- **API Documentation** - Improved SEO and professional formatting
+- **Changelog Guide** - Comprehensive management guide without emojis
+- **GitHub Releases Guide** - Complete release management documentation
+
+## [1.1.0] - 2024-01-15
+
+### Added
+- **Comprehensive E2E Testing Infrastructure and Examples** (ad07703)
+  - Automated installation testing across different environments
+  - CommonJS, TypeScript, ES Modules, and Yarn testing
+  - Example projects for different use cases
+  - Comprehensive testing documentation
+
+- **GitHub Pages Documentation Hosting** (e722f6d)
+  - Automated documentation deployment
+  - Professional documentation hosting
+  - Integration with GitHub Actions
+
+- **Complete Discord Notify Package with TypeDoc Documentation and Slack Notify Inspiration** (b14367a)
+  - Complete TypeDoc API documentation with TypeScript interfaces
   - Interactive documentation server for local development
   - Professional documentation structure with examples
-  - Complete interface documentation for all types
+  - Slack Notify inspiration and migration guide
+  - Discord vs Slack comparison table
+  - Advanced development tools and release management
+  - GitHub Actions CI/CD automation
 
-- 🚀 **Slack Notify Inspiration & Migration Guide**
-  - Clear positioning as evolution from Slack notification libraries
-  - Discord vs Slack comparison table highlighting advantages
-  - Migration examples from `@slack/webhook` and `node-slack-notify`
-  - Enhanced README with inspiration story and evolution details
-
-- 🔧 **Advanced Development Tools**
-  - Interactive release management system (`scripts/release.js`)
-  - Automated changelog generation with conventional commits
-  - Comprehensive test suite with Jest configuration
-  - TypeScript configuration with proper Node.js support
-
-- 📋 **GitHub Actions CI/CD**
-  - Automated testing and building workflows
-  - Release automation with changelog generation
-  - NPM deployment automation
-  - Professional release templates and asset management
-
-- 📖 **Documentation Structure**
-  - API documentation with TypeDoc integration
-  - Changelog management guide
-  - GitHub releases guide
-  - Local documentation server for development
+### Documentation
+- **Enhanced Changelog with Detailed v1.0.1 Release Notes** (0a93675)
+  - Improved changelog structure and content
+  - Better organization of release information
 
 ### Changed
 - **Enhanced README** - Added Slack Notify inspiration, comparison table, and migration guide
@@ -51,38 +61,38 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2024-01-XX
 
 ### Added
-- 🚀 **Core Discord Notification Service**
+- **Core Discord Notification Service**
   - Factory pattern for creating notifier instances
   - Support for simple string messages and rich embeds
   - Pre-built notification types (success, error, alert, info)
 
-- 🎨 **Rich Embed Support**
+- **Rich Embed Support**
   - Full Discord embed compatibility
   - Fields, thumbnails, images, and authors
   - Custom colors and timestamps
   - Footer with app name and environment
 
-- 📎 **File Attachment Support**
+- **File Attachment Support**
   - Send files with notifications
   - Support for text and binary files
   - Custom file names and content types
 
-- 🧵 **Thread Support**
+- **Thread Support**
   - Send messages to specific Discord threads
   - Default thread ID configuration
   - Organized conversation support
 
-- 👤 **Customization Options**
+- **Customization Options**
   - Username and avatar overrides
   - Configurable app name and environment
   - Custom webhook appearance
 
-- 📦 **TypeScript Support**
+- **TypeScript Support**
   - Full type definitions
   - Interface compliance
   - Type safety throughout
 
-- 🔧 **Advanced Features**
+- **Advanced Features**
   - Extend functionality for multiple embeds
   - Content outside of embeds
   - URL links for embed titles
@@ -121,6 +131,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History
 
+### Version 1.1.0
+- **Minor Release**: Enhanced documentation and development tools
+- **Features**: Complete API documentation, E2E testing, release automation
+- **Compatibility**: Node.js 16+, TypeScript support
+- **Documentation**: Professional guides and comprehensive examples
+
 ### Version 1.0.0
 - **Major Release**: Complete Discord notification service
 - **Features**: Rich embeds, file attachments, thread support
@@ -134,6 +150,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 ## Migration Guide
+
+### From 1.0.0 to 1.1.0
+
+#### Breaking Changes
+- None - this is a minor release with new features
+
+#### New Features
+- Complete API documentation with TypeDoc
+- E2E testing infrastructure
+- Interactive release management
+- Enhanced development tools
+
+#### Deprecations
+- None
 
 ### From 0.1.0 to 1.0.0
 
@@ -189,6 +219,7 @@ When contributing to this project, please update the changelog by adding a new e
 ## Support
 
 - **Documentation**: [README.md](README.md)
+- **API Reference**: [docs/API.md](docs/API.md)
 - **Issues**: [GitHub Issues](https://github.com/yourusername/discord-notify/issues)
 - **Discord**: [Join our community](https://bit.ly/devlander-discord-invite)
 - **NPM**: [Package page](https://www.npmjs.com/package/discord-notify) 
