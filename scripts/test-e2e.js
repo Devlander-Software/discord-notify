@@ -27,7 +27,7 @@ try {
 
 // Run the E2E tests
 async function runE2ETests() {
-  const testPath = join(__dirname, '..', 'tests', 'e2e-installation.test.ts');
+  const testPath = join(__dirname, '..', 'tests', 'e2e-installation.ts');
   
   console.log('📋 Running E2E Installation Tests...\n');
   

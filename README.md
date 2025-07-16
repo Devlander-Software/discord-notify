@@ -337,7 +337,29 @@ npm run test:integration
 
 ## Contributing
 
-Contributions are welcome! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
+Contributions are welcome! We love contributions from the community. Please see our [Contributing Guide](./CONTRIBUTING.md) for:
+
+- 🚀 **Development Setup** - How to get started
+- 📝 **Coding Standards** - TypeScript and code style guidelines  
+- 🧪 **Testing** - How to write and run tests
+- 📚 **Documentation** - Keeping docs up to date
+- 🔄 **Pull Request Process** - How to submit changes
+- 🎯 **Conventional Commits** - For automatic changelog generation
+
+### Quick Start for Contributors
+
+```bash
+# Fork and clone
+git clone https://github.com/YOUR_USERNAME/discord-notify.git
+cd discord-notify
+
+# Install and setup
+npm install
+npm run build
+npm run test:full
+
+# Make your changes and submit a PR!
+```
 
 ## License
 

@@ -118,8 +118,8 @@ runner.test('should install and work in CommonJS project', async () => {
   // Initialize npm project
   await runner.runCommand('npm init -y', projectDir);
   
-  // Install discord-notify
-  await runner.runCommand('npm install discord-notify', projectDir);
+  // Install discord-notify from local package
+  await runner.runCommand('npm install ../../../', projectDir);
   
   // Create test file
   const testFile = `
@@ -140,14 +140,18 @@ console.log('✅ Alert method available:', typeof notifier.alert);
 console.log('✅ Info method available:', typeof notifier.info);
 
 // Test that methods don't throw errors (with invalid webhook)
-try {
-  await notifier.send('Test message');
-  console.log('✅ Send method works (graceful failure with invalid webhook)');
-} catch (error) {
-  console.log('✅ Send method works (expected error with invalid webhook)');
+async function testSend() {
+  try {
+    await notifier.send('Test message');
+    console.log('✅ Send method works (graceful failure with invalid webhook)');
+  } catch (error) {
+    console.log('✅ Send method works (expected error with invalid webhook)');
+  }
 }
 
-console.log('🎉 All CommonJS tests passed!');
+testSend().then(() => {
+  console.log('🎉 All CommonJS tests passed!');
+}).catch(console.error);
 `;
 
   writeFileSync(join(projectDir, 'test.js'), testFile);
@@ -169,7 +173,7 @@ runner.test('should install and work in TypeScript project', async () => {
   await runner.runCommand('npm init -y', projectDir);
   
   // Install discord-notify and TypeScript
-  await runner.runCommand('npm install discord-notify typescript @types/node', projectDir);
+  await runner.runCommand('npm install ../../../ typescript @types/node', projectDir);
   
   // Create tsconfig.json
   const tsconfig = {
@@ -258,8 +262,8 @@ runner.test('should install and work in ES Modules project', async () => {
   packageJson.type = 'module';
   writeFileSync(join(projectDir, 'package.json'), JSON.stringify(packageJson, null, 2));
   
-  // Install discord-notify
-  await runner.runCommand('npm install discord-notify', projectDir);
+  // Install discord-notify from local package
+  await runner.runCommand('npm install ../../../', projectDir);
   
   // Create test file
   const testFile = `
@@ -280,14 +284,18 @@ console.log('✅ Alert method available:', typeof notifier.alert);
 console.log('✅ Info method available:', typeof notifier.info);
 
 // Test that methods don't throw errors (with invalid webhook)
-try {
-  await notifier.send('Test message');
-  console.log('✅ Send method works (graceful failure with invalid webhook)');
-} catch (error) {
-  console.log('✅ Send method works (expected error with invalid webhook)');
+async function testSend() {
+  try {
+    await notifier.send('Test message');
+    console.log('✅ Send method works (graceful failure with invalid webhook)');
+  } catch (error) {
+    console.log('✅ Send method works (expected error with invalid webhook)');
+  }
 }
 
-console.log('🎉 All ES Modules tests passed!');
+testSend().then(() => {
+  console.log('🎉 All ES Modules tests passed!');
+}).catch(console.error);
 `;
 
   writeFileSync(join(projectDir, 'test.js'), testFile);
@@ -307,8 +315,8 @@ runner.test('should install and work with Yarn', async () => {
   // Initialize npm project
   await runner.runCommand('npm init -y', projectDir);
   
-  // Install discord-notify with yarn
-  const { stdout, stderr } = await runner.runCommandWithOutput('yarn add discord-notify', projectDir);
+  // Install discord-notify with yarn (local package)
+  const { stdout, stderr } = await runner.runCommandWithOutput('yarn add ../../../', projectDir);
   
   // Check if yarn is available, if not, skip this test
   if (stderr.includes('command not found') || stderr.includes('yarn: not found')) {
@@ -347,8 +355,8 @@ runner.test('should work with different Node.js versions', async () => {
   // Initialize npm project
   await runner.runCommand('npm init -y', projectDir);
   
-  // Install discord-notify
-  await runner.runCommand('npm install discord-notify', projectDir);
+  // Install discord-notify from local package
+  await runner.runCommand('npm install ../../../', projectDir);
   
   // Check Node.js version
   const nodeVersion = await runner.runCommand('node --version', projectDir);
@@ -390,8 +398,8 @@ runner.test('should have correct package.json dependencies', async () => {
   // Initialize npm project
   await runner.runCommand('npm init -y', projectDir);
   
-  // Install discord-notify
-  await runner.runCommand('npm install discord-notify', projectDir);
+  // Install discord-notify from local package
+  await runner.runCommand('npm install ../../', projectDir);
   
   // Read package.json
   const packageJson = JSON.parse(readFileSync(join(projectDir, 'package.json'), 'utf8'));
@@ -460,8 +468,8 @@ runner.test('should work in production build', async () => {
   // Initialize npm project
   await runner.runCommand('npm init -y', projectDir);
   
-  // Install discord-notify
-  await runner.runCommand('npm install discord-notify', projectDir);
+  // Install discord-notify from local package
+  await runner.runCommand('npm install ../../../', projectDir);
   
   // Set NODE_ENV to production
   process.env.NODE_ENV = 'production';
