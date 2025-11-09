@@ -152,7 +152,7 @@ runner.test('should send a rich embed message to Discord', async () => {
     },
     author: {
       name: 'Integration Test Bot',
-      url: 'https://github.com/yourusername/discord-notify',
+      url: 'https://github.com/Devlander-Software/discord-notify',
       icon_url: 'https://via.placeholder.com/32x32/0099ff/ffffff?text=🤖'
     },
     footer: {

@@ -232,5 +232,5 @@ MIT License - see LICENSE file for details.
 - [NPM Package](https://www.npmjs.com/package/discord-notify)
 - [Main README](../README.md)
 - [Changelog](../CHANGELOG.md)
-- [GitHub Issues](https://github.com/yourusername/discord-notify/issues)
+- [GitHub Issues](https://github.com/Devlander-Software/discord-notify/issues)
 - [Discord Community](https://bit.ly/devlander-discord-invite) 

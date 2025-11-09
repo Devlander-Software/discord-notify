@@ -93,7 +93,7 @@ function createReleaseNotes(version, changelogEntry) {
   return template
     .replace(/\{\{version\}\}/g, version)
     .replace(/\{\{changelog_entry\}\}/g, changelogEntry)
-    .replace(/\{\{repo\}\}/g, 'yourusername/discord-notify')
+    .replace(/\{\{repo\}\}/g, 'Devlander-Software/discord-notify')
     .replace(/\{\{package_size\}\}/g, packageSize)
     .replace(/\{\{migration_guide\}\}/g, migrationGuide)
     .replace(/\{\{previous_version\}\}/g, previousVersion);
@@ -264,8 +264,8 @@ async function interactiveRelease() {
       console.log('  - Create GitHub release');
       console.log('  - Deploy to NPM');
       console.log('\n🔗 Monitor progress:');
-      console.log(`  - GitHub Actions: https://github.com/yourusername/discord-notify/actions`);
-      console.log(`  - Releases: https://github.com/yourusername/discord-notify/releases`);
+      console.log(`  - GitHub Actions: https://github.com/Devlander-Software/discord-notify/actions`);
+      console.log(`  - Releases: https://github.com/Devlander-Software/discord-notify/releases`);
     } catch (error) {
       console.error('❌ Failed to push changes.');
     }

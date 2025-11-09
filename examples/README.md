@@ -238,6 +238,6 @@ For more information, see:
 
 ### Getting Help
 
-- [GitHub Issues](https://github.com/yourusername/discord-notify/issues)
+- [GitHub Issues](https://github.com/Devlander-Software/discord-notify/issues)
 - [Discord Community](https://bit.ly/devlander-discord-invite)
 - [Documentation](../README.md) 

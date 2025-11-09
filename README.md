@@ -368,7 +368,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 ## Support
 
 - **Documentation**: [API Reference](./docs/API.md)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/discord-notify/issues)
+- **Issues**: [GitHub Issues](https://github.com/Devlander-Software/discord-notify/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/orgs/Devlander-Software/discussions)
 - **Discord Community**: [Join our Discord](https://bit.ly/devlander-discord-invite)
 

@@ -97,7 +97,7 @@ function markdownToHtml(markdown) {
         <div class="nav">
             <a href="/">📖 API Docs</a>
             <a href="/api">📋 API Reference</a>
-            <a href="https://github.com/yourusername/discord-notify">🐙 GitHub</a>
+            <a href="https://github.com/Devlander-Software/discord-notify">🐙 GitHub</a>
             <a href="https://www.npmjs.com/package/discord-notify">📦 NPM</a>
         </div>
         <div class="content">

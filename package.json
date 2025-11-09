@@ -74,6 +74,9 @@
   ],
   "author": "Devlander Software",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Devlander-Software/discord-notify.git"

@@ -324,7 +324,7 @@ runner.test('should install and work with Yarn', async () => {
     return;
   }
   
-  expect(stdout).toContain('discord-notify');
+      expect(stdout).toContain('discord-notify');
   
   // Create test file
   const testFile = `
@@ -405,11 +405,11 @@ runner.test('should have correct package.json dependencies', async () => {
   const packageJson = JSON.parse(readFileSync(join(projectDir, 'package.json'), 'utf8'));
   
   expect(packageJson.dependencies).toBeDefined();
-  expect(packageJson.dependencies['discord-notify']).toBeDefined();
+      expect(packageJson.dependencies['discord-notify']).toBeDefined();
   
   // Check that discord-notify has no dependencies (zero dependencies)
   const discordNotifyPackageJson = JSON.parse(
-    readFileSync(join(projectDir, 'node_modules', 'discord-notify', 'package.json'), 'utf8')
+      readFileSync(join(projectDir, 'node_modules', '@devlander', 'discord-notify', 'package.json'), 'utf8')
   );
   
   expect(discordNotifyPackageJson.dependencies).toBeDefined();
@@ -434,11 +434,11 @@ runner.test('should install from NPM registry', async () => {
     throw new Error('Package not found on NPM registry');
   }
   
-  expect(stdout).toContain('discord-notify');
+      expect(stdout).toContain('discord-notify');
   
   // Verify the package is installed
   const packageJson = JSON.parse(readFileSync(join(projectDir, 'package.json'), 'utf8'));
-  expect(packageJson.dependencies['discord-notify']).toBeDefined();
+      expect(packageJson.dependencies['discord-notify']).toBeDefined();
   
   // Test basic functionality
   const testFile = `

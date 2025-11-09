@@ -1,5 +1,7 @@
 # GitHub Actions Setup Guide
 
+> **⚠️ Important**: This guide is for **maintainers and contributors** who want to set up GitHub Actions to **publish** the package to npm. **Regular users do NOT need this** - they only need a Discord webhook URL to use the package.
+
 This guide explains how to set up GitHub Actions for automated testing, building, and deploying the Discord Notify package to npm.
 
 ## 📋 Workflows Overview
@@ -20,6 +22,8 @@ This guide explains how to set up GitHub Actions for automated testing, building
 - **Runs on**: Node.js 20.x
 
 ## 🔧 Setup Instructions
+
+> **Note for Users**: If you're just **using** the package (not publishing it), you don't need an NPM token. You only need a Discord webhook URL. See the [main README](../README.md) for usage instructions.
 
 ### Step 1: Create NPM Token
 

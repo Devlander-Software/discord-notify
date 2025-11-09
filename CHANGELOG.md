@@ -219,6 +219,6 @@ When contributing to this project, please update the changelog by adding a new e
 
 - **Documentation**: [README.md](README.md)
 - **API Reference**: [docs/API.md](docs/API.md)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/discord-notify/issues)
+- **Issues**: [GitHub Issues](https://github.com/Devlander-Software/discord-notify/issues)
 - **Discord**: [Join our community](https://bit.ly/devlander-discord-invite)
 - **NPM**: [Package page](https://www.npmjs.com/package/discord-notify) 

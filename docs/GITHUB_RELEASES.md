@@ -182,8 +182,8 @@ GitHub Actions will now:
   - Deploy to NPM
 
 Monitor progress:
-  - GitHub Actions: https://github.com/yourusername/discord-notify/actions
-  - Releases: https://github.com/yourusername/discord-notify/releases
+  - GitHub Actions: https://github.com/Devlander-Software/discord-notify/actions
+  - Releases: https://github.com/Devlander-Software/discord-notify/releases
 ```
 
 ## Release Templates
