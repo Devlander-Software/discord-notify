@@ -145,6 +145,57 @@ await extendedNotifier.send({
 });
 ```
 
+### Forum Tags with Auto-Creation
+```typescript
+// With bot token - tags are auto-created and applied
+const notifier = DiscordNotifyFactory({
+  webhookUrl: 'YOUR_WEBHOOK_URL',
+  botToken: 'YOUR_BOT_TOKEN',
+  forum: {
+    defaultForumChannelId: 'YOUR_FORUM_CHANNEL_ID',
+    autoCreateTags: true // Default: true when botToken exists
+  }
+});
+
+// Create forum post with tags (tags auto-created if missing)
+if (notifier.forum) {
+  const threadId = await notifier.forum.post({
+    title: 'Bug Report: Database Connection',
+    message: {
+      title: 'Error Details',
+      description: 'Database connection failed at 3:45 PM',
+      color: 0xff0000
+    },
+    tags: ['bug', 'database', 'critical'] // Tag names - auto-resolved to IDs
+  });
+}
+
+// Or ensure tags exist first
+if (notifier.forum) {
+  const tagIds = await notifier.forum.ensureTags('channel-id', ['bug', 'feature']);
+  // Returns tag IDs in same order as input
+}
+```
+
+### Webhook-Only Tags (Fallback Mode)
+```typescript
+// Without bot token - tags shown as embed field/footer
+const notifier = DiscordNotifyFactory({
+  webhookUrl: 'YOUR_WEBHOOK_URL',
+  forum: {
+    onMissingBot: 'fallbackToWebhook', // Default
+    tagsFieldMode: 'field' // 'field' | 'footer' | 'none'
+  }
+});
+
+// Tags will appear as a field in the embed
+await notifier.send({
+  title: 'Bug Report',
+  description: 'Database connection issue',
+  tags: ['bug', 'database'] // Shown as "Tags: bug, database" field
+});
+```
+
 ### Monitoring Integration
 ```typescript
 // Create a monitoring system
@@ -178,9 +229,36 @@ const notifier = DiscordNotifyFactory({
   environment: 'production',                          // Optional
   username: 'My Bot',                                 // Optional
   avatarUrl: 'https://example.com/bot-avatar.png',   // Optional
-  threadId: '1234567890123456789'                    // Optional
+  threadId: '1234567890123456789',                    // Optional
+  botToken: 'YOUR_BOT_TOKEN',                          // Optional - for forum tags, deduplication, message editing
+  forum: {                                             // Optional - forum configuration
+    defaultForumChannelId: 'YOUR_FORUM_CHANNEL_ID',   // Optional
+    autoCreateTags: true,                              // Optional - default: true when botToken exists
+    onMissingBot: 'fallbackToWebhook',                 // Optional - 'fallbackToWebhook' | 'ignoreTags' | 'throw'
+    tagsFieldMode: 'field',                            // Optional - 'field' | 'footer' | 'none'
+    tagCacheTtlMs: 900000                              // Optional - default: 15 minutes
+  }
 });
 ```
+
+### Configuration Options
+
+**Required:**
+- `webhookUrl` (string): Your Discord webhook URL
+
+**Optional:**
+- `appName` (string): Name of your application
+- `environment` (string): Environment name (e.g., 'production', 'staging')
+- `username` (string): Override webhook username
+- `avatarUrl` (string): Override webhook avatar URL
+- `threadId` (string): Default thread ID for all messages
+- `botToken` (string): Bot token for advanced features (forum tags, deduplication, message editing)
+- `forum` (object): Forum configuration
+  - `defaultForumChannelId` (string): Default forum channel ID
+  - `autoCreateTags` (boolean): Auto-create missing tags (default: `true` when `botToken` exists)
+  - `onMissingBot` ('fallbackToWebhook' | 'ignoreTags' | 'throw'): Behavior when tags provided but no bot token (default: `'fallbackToWebhook'`)
+  - `tagsFieldMode` ('field' | 'footer' | 'none'): How to display tags in webhook fallback (default: `'field'`)
+  - `tagCacheTtlMs` (number): Tag cache TTL in milliseconds (default: `900000` = 15 minutes)
 
 ## Error Handling
 
@@ -227,10 +305,70 @@ MIT License - see LICENSE file for details.
 
 ---
 
+## Type Definitions
+
+### SendArgs Interface
+
+```typescript
+interface SendArgs {
+  content?: string;        // Plain text message (outside embed)
+  text?: string;           // Legacy alias for content
+  title?: string;          // Embed title
+  description?: string;     // Embed description
+  color?: number;          // Embed color (hex)
+  fields?: DiscordField[]; // Embed fields
+  timestamp?: string;      // Embed timestamp
+  thread_id?: string;       // Post to existing thread instead of creating new one
+  footer?: { text: string; icon_url?: string; };
+  thumbnail?: { url: string; };
+  image?: { url: string; };
+  author?: { name: string; url?: string; icon_url?: string; };
+  url?: string;            // URL for embed title
+  tags?: string[];         // Forum tag names (not IDs) - will be resolved to IDs if botToken is available
+  forumChannelId?: string; // Override forum channel ID per call (optional)
+}
+```
+
+### DiscordField Interface
+
+```typescript
+interface DiscordField {
+  name: string;
+  value: string;
+  inline?: boolean;
+}
+```
+
+### FileAttachment Interface
+
+```typescript
+interface FileAttachment {
+  name: string;
+  data: Uint8Array | string;
+  contentType?: string;
+}
+```
+
+### ForumConfig Interface
+
+```typescript
+interface ForumConfig {
+  defaultForumChannelId?: string;
+  autoCreateTags?: boolean;
+  onMissingBot?: 'fallbackToWebhook' | 'ignoreTags' | 'throw';
+  tagsFieldMode?: 'field' | 'footer' | 'none';
+  tagCacheTtlMs?: number;
+}
+```
+
+**Note:** The `tags` field in `SendArgs` accepts tag **names** (not IDs). When `botToken` is provided, these are automatically resolved to tag IDs. When `botToken` is missing, tags are displayed as metadata based on `tagsFieldMode`.
+
 ## Related Links
 
 - [NPM Package](https://www.npmjs.com/package/discord-notify)
-- [Main README](../README.md)
-- [Changelog](../CHANGELOG.md)
+- [Main Documentation](index.html)
+- [TypeDoc Reference](api/)
+- [Changelog](https://github.com/Devlander-Software/discord-notify/blob/main/CHANGELOG.md)
 - [GitHub Issues](https://github.com/Devlander-Software/discord-notify/issues)
-- [Discord Community](https://bit.ly/devlander-discord-invite) 
+- [Discord Community](https://bit.ly/devlander-discord-invite)
+- [Bot Permissions Guide](https://github.com/Devlander-Software/discord-notify/blob/main/BOT_PERMISSIONS.md) 
